@@ -92,3 +92,51 @@ const reviewSwiper = new Swiper(".reviewSwiper", {
     },
   },
 });
+
+// ==========================
+// Favorite System
+// ==========================
+
+// تمام آیکون‌های قلب را پیدا می‌کند
+const favorites = document.querySelectorAll(".favorite");
+
+// علاقه‌مندی‌های ذخیره شده
+let savedFavorites =
+  JSON.parse(localStorage.getItem("favorites")) || [];
+
+// بررسی می‌کند قبلاً ذخیره شده یا نه
+favorites.forEach((heart, index) => {
+
+  if (savedFavorites.includes(index)) {
+
+    heart.classList.remove("fa-regular");
+
+    heart.classList.add("fa-solid");
+
+  }
+
+  // کلیک روی قلب
+  heart.addEventListener("click", () => {
+
+    heart.classList.toggle("fa-solid");
+
+    heart.classList.toggle("fa-regular");
+
+    if (heart.classList.contains("fa-solid")) {
+
+      savedFavorites.push(index);
+
+    } else {
+
+      savedFavorites = savedFavorites.filter(item => item !== index);
+
+    }
+
+    localStorage.setItem(
+      "favorites",
+      JSON.stringify(savedFavorites)
+    );
+
+  });
+
+});
