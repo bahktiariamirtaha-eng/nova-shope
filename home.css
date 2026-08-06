@@ -1093,44 +1093,56 @@ nav ul li a:hover {
 }
 
 @media (max-width: 440px) {
-  header {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto auto;
-  }
-  header span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 40px;
-  }
-  header p {
-    margin: auto auto;
-  }
-  header nav {
-    display: none;
+
+  html,
+  body {
+    overflow-x: hidden;
   }
 
+  /* ================= HEADER ================= */
+
+  header {
+    width: 90%;
+    height: max-content;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+  }
+
+  header p {
+    margin: auto;
+  }
+
+  header nav,
   .header-icons {
     display: none;
   }
 
+  /* ================= HERO ================= */
+
   .hero {
-    flex-direction: column-reverse;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
     margin-top: 40%;
   }
 
   .hero-image img {
-    width: 80%;
-    margin-top: -100%;
+    display: none;
   }
+
   .hero-content h1 {
-    margin: auto auto;
+    margin: auto;
     font-size: 16px;
     line-height: 1.6;
   }
@@ -1138,50 +1150,64 @@ nav ul li a:hover {
   .hero-btns {
     width: 70%;
     margin-right: 12%;
+    display: flex;
     flex-direction: column;
   }
 
+  /* ================= FEATURES ================= */
+
   .features {
     width: 95%;
-    margin-top: -70%;
-    font-size: 13px;
+    margin-top: -160%;
     gap: 15px;
+    font-size: 12px;
   }
+
   .features:hover {
     display: none;
   }
+
   .line {
     display: none;
   }
 
+  /* ================= BOTTOM NAV ================= */
+
   .bottom-nav {
     position: fixed;
-    bottom: 15px;
     left: 50%;
+    bottom: 15px;
     transform: translateX(-50%);
     width: 95%;
     height: 70px;
-    border-radius: 22px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    border-radius: 22px;
+
     background: rgba(15, 15, 15, 0.82);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     z-index: 9999;
   }
 
   .bottom-nav a {
+    flex: 1;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 6px;
+
     text-decoration: none;
+
     color: #9ca3af;
     font-size: 12px;
-    transition: 0.35s;
-    flex: 1;
+
+    transition: .35s;
   }
 
   .bottom-nav a i {
@@ -1194,16 +1220,18 @@ nav ul li a:hover {
 
   .bottom-nav a:hover {
     color: var(--primary);
-
     transform: translateY(-5px);
   }
-  /* categories */
+
+  /* ================= CATEGORIES ================= */
+
   .categories {
+    width: 92%;
+    margin-top: 55%;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    width: 92%;
-    margin-top: 80%;
   }
 
   .cat-card {
@@ -1219,29 +1247,36 @@ nav ul li a:hover {
   .cat-card h3 {
     font-size: 16px;
   }
-  /* cards */
+
+  /* ================= PRODUCTS ================= */
+
   .swiper-slide {
     width: 100%;
   }
+
   .product-card {
     width: 80%;
     gap: 10%;
   }
 
-  /* banner */
+  /* ================= OFFER ================= */
+
   .offer-content {
+    display: flex;
     flex-direction: column-reverse;
-    text-align: center;
     gap: 30px;
+    text-align: center;
   }
 
   .offer-image img {
     display: none;
   }
+
   .offer-badge {
     margin: 0 auto;
     font-size: 13px;
   }
+
   .offer-text h2 {
     margin: 10% auto;
     font-size: 18px;
@@ -1253,12 +1288,13 @@ nav ul li a:hover {
   }
 
   .offer-text a {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: auto -30%;
   }
 
-  /* ---------- Videos ---------- */
+  /* ================= VIDEOS ================= */
 
   .videos {
     width: 92%;
@@ -1266,6 +1302,7 @@ nav ul li a:hover {
   }
 
   .section-title {
+    display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
@@ -1276,6 +1313,7 @@ nav ul li a:hover {
   }
 
   .videos-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 18px;
   }
@@ -1291,7 +1329,7 @@ nav ul li a:hover {
     object-fit: cover;
   }
 
-  /* ---------- Reviews ---------- */
+  /* ================= REVIEWS ================= */
 
   .reviews {
     width: 92%;
@@ -1313,7 +1351,7 @@ nav ul li a:hover {
     line-height: 2;
   }
 
-  /* ---------- Footer ---------- */
+  /* ================= FOOTER ================= */
 
   .footer {
     width: 80%;
@@ -1322,6 +1360,7 @@ nav ul li a:hover {
   }
 
   .footer-content {
+    display: flex;
     flex-direction: column;
     gap: 35px;
   }
@@ -1336,6 +1375,7 @@ nav ul li a:hover {
   }
 
   .footer-links {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
     text-align: center;
@@ -1351,11 +1391,8 @@ nav ul li a:hover {
 
   .footer-bottom {
     font-size: 13px;
-
     line-height: 2;
   }
-  html,
-  body {
-    overflow-x: hidden;
-  }
+
 }
+
