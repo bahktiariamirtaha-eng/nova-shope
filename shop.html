@@ -4,203 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <title>فروشگاه | Nova Digital</title>
+    <link rel="stylesheet" href="shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
-    <!doctype html>
-    <html lang="fa" dir="rtl">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <title>فروشگاه | Nova Digital</title>
-
-        <link rel="stylesheet" href="shop.css" />
-
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        />
-      </head>
-      <body>
-        <header>
-          <!-- بعدا هدر اصلی سایت -->
-        </header>
-
-        <!-- Breadcrumb -->
-
-        <section class="breadcrumb">
-          <a href="index.html">خانه</a>
-
-          <span>/</span>
-
-          <span>فروشگاه</span>
-        </section>
-
-        <!-- Shop -->
-
-        <section class="shop">
-          <div class="shop-sidebar">
-            <h2>فیلترها</h2>
-
-            <div class="filter-box">
-              <h3>دسته بندی</h3>
-
-              <label><input type="checkbox" /> لپ تاپ</label>
-
-              <label><input type="checkbox" /> موبایل</label>
-
-              <label><input type="checkbox" /> مانیتور</label>
-
-              <label><input type="checkbox" /> لوازم جانبی</label>
-            </div>
-
-            <div class="filter-box">
-              <h3>برند</h3>
-
-              <label><input type="checkbox" /> ASUS</label>
-
-              <label><input type="checkbox" /> Samsung</label>
-
-              <label><input type="checkbox" /> Apple</label>
-
-              <label><input type="checkbox" /> Lenovo</label>
-            </div>
-
-            <div class="filter-box">
-              <h3>محدوده قیمت</h3>
-
-              <input type="range" />
-            </div>
+    <!-- ================= HEADER ================= -->
+    <header><!-- هدر اصلی سایت --></header>
+    <!-- ================= Breadcrumb ================= -->
+    <section class="breadcrumb">
+      <a href="index.html">خانه</a> <i class="fa-solid fa-angle-left"></i>
+      <span>فروشگاه</span>
+    </section>
+    <!-- ================= SHOP ================= -->
+    <section class="shop">
+      <!-- Sidebar -->
+      <aside class="shop-sidebar">
+        <h2>فیلتر محصولات</h2>
+        <div class="filter-box">
+          <h3>دسته بندی</h3>
+          <label><input type="checkbox" /> لپ تاپ</label>
+          <label><input type="checkbox" /> موبایل</label>
+          <label><input type="checkbox" /> مانیتور</label>
+          <label><input type="checkbox" /> هدفون</label>
+          <label><input type="checkbox" /> لوازم جانبی</label>
+        </div>
+        <div class="filter-box">
+          <h3>برند</h3>
+          <label><input type="checkbox" /> ASUS</label>
+          <label><input type="checkbox" /> Apple</label>
+          <label><input type="checkbox" /> Samsung</label>
+          <label><input type="checkbox" /> Lenovo</label>
+          <label><input type="checkbox" /> MSI</label>
+          <label><input type="checkbox" /> HP</label>
+        </div>
+        <div class="filter-box">
+          <h3>محدوده قیمت</h3>
+          <input type="range" />
+        </div>
+      </aside>
+      <!-- Content -->
+      <main class="shop-content">
+        <!-- لپ تاپ -->
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>💻 لپ تاپ</h2>
+            <a href="#">مشاهده همه</a>
           </div>
-
-          <div class="shop-content">
-            <div class="shop-top">
-              <h1>فروشگاه محصولات</h1>
-
-              <select>
-                <option>جدیدترین</option>
-
-                <option>ارزان ترین</option>
-
-                <option>گران ترین</option>
-
-                <option>پرفروش ترین</option>
-              </select>
-            </div>
-
-            <div class="products-grid"  id="productsGrid">
-              <!-- Product -->
-
-              <div class="product-card">
-                <div class="badge">-15%</div>
-
-                <i class="fa-regular fa-heart favorite"></i>
-
-                <div class="product-image">
-                  <img src="image/laptop1.png" />
-                </div>
-
-                <div class="product-info">
-                  <h3>ASUS TUF F15</h3>
-
-                  <span>Core i7 • RTX4060</span>
-
-                  <div class="price">72,900,000 تومان</div>
-
-                  <a href="product.html">
-                    مشاهده محصول
-
-                    <i class="fa-solid fa-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Product -->
-
-              <div class="product-card">
-                <div class="badge">-10%</div>
-
-                <i class="fa-regular fa-heart favorite"></i>
-
-                <div class="product-image">
-                  <img src="image/s25.png" />
-                </div>
-
-                <div class="product-info">
-                  <h3>Galaxy S25 Ultra</h3>
-
-                  <span>512GB • 12GB</span>
-
-                  <div class="price">64,900,000 تومان</div>
-
-                  <a href="product.html">
-                    مشاهده محصول
-
-                    <i class="fa-solid fa-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Product -->
-
-              <div class="product-card">
-                <div class="badge">-12%</div>
-
-                <i class="fa-regular fa-heart favorite"></i>
-
-                <div class="product-image">
-                  <img src="image/headphone.png" />
-                </div>
-
-                <div class="product-info">
-                  <h3>Sony XM5</h3>
-
-                  <span>Wireless</span>
-
-                  <div class="price">16,900,000 تومان</div>
-
-                  <a href="product.html">
-                    مشاهده محصول
-
-                    <i class="fa-solid fa-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Product -->
-
-              <div class="product-card">
-                <div class="badge">-20%</div>
-
-                <i class="fa-regular fa-heart favorite"></i>
-
-                <div class="product-image">
-                  <img src="image/monitor.png" />
-                </div>
-
-                <div class="product-info">
-                  <h3>LG UltraWide</h3>
-
-                  <span>34 Inch</span>
-
-                  <div class="price">38,000,000 تومان</div>
-
-                  <a href="product.html">
-                    مشاهده محصول
-
-                    <i class="fa-solid fa-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="products-grid" id="laptops"></div>
         </section>
-
-        <footer>
-          <!-- فوتر اصلی -->
-        </footer>
-
-        <script src="shop.js"></script>
-      </body>
-    </html>
+        <!-- موبایل -->
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>📱 موبایل</h2>
+            <a href="#">مشاهده همه</a>
+          </div>
+          <div class="products-grid" id="mobiles"></div>
+        </section>
+        <!-- مانیتور -->
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>🖥 مانیتور</h2>
+            <a href="#">مشاهده همه</a>
+          </div>
+          <div class="products-grid" id="monitors"></div>
+        </section>
+        <!-- هدفون -->
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>🎧 هدفون</h2>
+            <a href="#">مشاهده همه</a>
+          </div>
+          <div class="products-grid" id="headphones"></div>
+        </section>
+        <!-- لوازم جانبی -->
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>⌨️ لوازم جانبی</h2>
+            <a href="#">مشاهده همه</a>
+          </div>
+          <div class="products-grid" id="accessories"></div>
+        </section>
+      </main>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer><!-- فوتر اصلی سایت --></footer>
+    <script src="shop.js"></script>
   </body>
 </html>
