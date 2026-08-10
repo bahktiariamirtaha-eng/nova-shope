@@ -13,7 +13,6 @@
   --radius: 24px;
   --transition: 0.35s ease;
 }
-
 /* ================= Reset ================= */
 
 * {
@@ -43,7 +42,7 @@ img {
   max-width: 100%;
   display: block;
 }
-button{ 
+button {
   border: none;
   cursor: pointer;
   font-family: inherit;
@@ -52,7 +51,173 @@ button{
 input {
   font-family: inherit;
 }
+/* =========================================
+   HEADER ACTIONS
+========================================= */
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 9999;
+}
+
+/* =========================================
+   MAIN CIRCLE
+========================================= */
+
+.header-menu-toggle {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: 0.35s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.header-menu-toggle i {
+  font-size: 18px;
+  transition: 0.35s ease;
+}
+
+.header-menu-toggle:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.25);
+}
+
+/* =========================================
+   ICONS CONTAINER
+========================================= */
+
+.header-menu-items {
+  position: absolute;
+  top: 58px;
+  right: 50%;
+  transform: translateX(50%) scale(0.7);
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.35s ease;
+  z-index: 9;
+}
+
+/* =========================================
+   OPEN STATE
+========================================= */
+
+.header-actions.active .header-menu-items {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) scale(1);
+}
+
+.header-actions.active .header-menu-toggle {
+  background: var(--primary);
+
+  border-color: var(--primary);
+}
+
+.header-actions.active .header-menu-toggle i {
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   EACH ICON
+========================================= */
+
+.header-menu-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #a8b3cf;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-menu-item i {
+  font-size: 17px;
+}
+
+/* Hover */
+
+.header-menu-item:hover {
+  color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.3);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .header-menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header-menu-item {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header-menu-items {
+    top: 54px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 440px) {
+  .header-actions {
+    margin-right: 5px;
+  }
+
+  .header-menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header-menu-toggle i {
+    font-size: 16px;
+  }
+
+  .header-menu-item {
+    width: 40px;
+    height: 40px;
+  }
+  .header-menu-item i {
+    font-size: 15px;
+  }
+}
 /* ================= Header ================= */
 
 header {
@@ -270,7 +435,7 @@ header {
   left: -120px;
   filter: blur(70px);
   opacity: 0;
-  transition: 0.45sک
+  transition: 0.45sک;
 }
 
 .product-card:hover::after {
@@ -439,7 +604,141 @@ header {
 .favorite.active {
   color: #ff4d6d;
 }
+/* =========================================
+   Load More Button
+========================================= */
 
+.load-more-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 55px 0 80px;
+}
+
+.load-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-width: 180px;
+  padding: 14px 28px;
+
+  border: 1px solid rgba(91, 140, 255, 0.25);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  transition: all 0.35s ease;
+}
+
+/* آیکون */
+
+.load-more-btn i {
+  font-size: 13px;
+  transition: transform 0.35s ease;
+}
+
+/* Hover */
+
+.load-more-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(91, 140, 255, 0.25);
+}
+
+.load-more-btn:hover i {
+  transform: translateY(4px);
+}
+
+/* Click */
+
+.load-more-btn:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+/* =========================================
+   Loading Animation
+========================================= */
+
+.products-grid.loading {
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* =========================================
+   Product Appear Animation
+========================================= */
+
+.product-card {
+  animation: productAppear 0.5s ease both;
+}
+
+@keyframes productAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 440px) {
+  .load-more-container {
+    margin: 40px 0 70px;
+  }
+
+  .load-more-btn {
+    width: 90%;
+    max-width: 320px;
+
+    padding: 14px 20px;
+
+    font-size: 14px;
+
+    border-radius: 14px;
+  }
+
+  .load-more-btn i {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 768px) {
+  .load-more-container {
+    margin-top: 45px;
+  }
+
+  .load-more-btn {
+    min-width: 170px;
+  }
+}
 /* ===========================================
             RESPONSIVE
 ===========================================*/
@@ -577,7 +876,7 @@ header {
   .pagination button {
     width: 42px;
 
-  height: 42px;
+    height: 42px;
   }
 }
 

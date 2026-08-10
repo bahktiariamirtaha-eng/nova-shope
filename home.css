@@ -332,6 +332,9 @@ nav ul li a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
+.categories a{
+  text-decoration: none;
+}
 
 .cat-card {
   position: relative;
