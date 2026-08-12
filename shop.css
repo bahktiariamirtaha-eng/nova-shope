@@ -51,9 +51,6 @@ button {
 input {
   font-family: inherit;
 }
-/* =========================================
-   HEADER ACTIONS
-========================================= */
 
 .header-actions {
   display: flex;
@@ -161,8 +158,6 @@ input {
 .header-menu-item i {
   font-size: 17px;
 }
-
-/* Hover */
 
 .header-menu-item:hover {
   color: #fff;
@@ -641,7 +636,6 @@ header {
 .product-card {
   animation: productAppear 0.5s ease both;
 }
-
 
 @keyframes productAppear {
   from {
