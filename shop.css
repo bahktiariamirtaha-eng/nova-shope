@@ -59,7 +59,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-    position: fixed;
+  position: fixed;
   top: 25px;
   left: 25px;
   z-index: 9999;
@@ -170,53 +170,6 @@ input {
   border-color: var(--primary);
   transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(91, 140, 255, 0.3);
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-  .header-menu-toggle {
-    width: 44px;
-    height: 44px;
-  }
-
-  .header-menu-item {
-    width: 42px;
-    height: 42px;
-  }
-
-  .header-menu-items {
-    top: 54px;
-  }
-}
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 440px) {
-  .header-actions {
-    margin-right: 5px;
-  }
-
-  .header-menu-toggle {
-    width: 42px;
-    height: 42px;
-  }
-
-  .header-menu-toggle i {
-    font-size: 16px;
-  }
-
-  .header-menu-item {
-    width: 40px;
-    height: 40px;
-  }
-  .header-menu-item i {
-    font-size: 15px;
-  }
 }
 /* ================= Header ================= */
 
@@ -689,6 +642,7 @@ header {
   animation: productAppear 0.5s ease both;
 }
 
+
 @keyframes productAppear {
   from {
     opacity: 0;
@@ -905,5 +859,51 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .header-menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header-menu-item {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header-menu-items {
+    top: 54px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 440px) {
+  .header-actions {
+    margin-right: 5px;
+  }
+
+  .header-menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header-menu-toggle i {
+    font-size: 16px;
+  }
+
+  .header-menu-item {
+    width: 40px;
+    height: 40px;
+  }
+  .header-menu-item i {
+    font-size: 15px;
   }
 }

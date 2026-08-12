@@ -18,6 +18,7 @@ const products = {
       price: "72,900,000",
       image: "shopeimage/laptop/image-laptop-1.png",
       badge: "15%",
+      loading: "lazy",
     },
 
     {
@@ -26,6 +27,7 @@ const products = {
       price: "69,500,000",
       image: "shopeimage/laptop/image-laptop-2.png",
       badge: "12%",
+      loading: "lazy",
     },
 
     {
@@ -34,6 +36,7 @@ const products = {
       price: "67,800,000",
       image: "shopeimage/laptop/image-laptop-3.png",
       badge: "10%",
+      loading: "lazy",
     },
 
     {
@@ -42,6 +45,7 @@ const products = {
       price: "55,900,000",
       image: "shopeimage/laptop/image-laptop-4.png",
       badge: "8%",
+      loading: "lazy",
     },
 
     {
@@ -50,6 +54,7 @@ const products = {
       price: "95,000,000",
       image: "shopeimage/laptop/image-laptop-5.png",
       badge: "5%",
+      loading: "lazy",
     },
   ],
 
@@ -64,6 +69,7 @@ const products = {
       price: "64,900,000",
       image: "shopeimage/phone/SOPHE-PHONE1.png",
       badge: "10%",
+      loading: "lazy",
     },
 
     {
@@ -72,6 +78,7 @@ const products = {
       price: "98,000,000",
       image: "shopeimage/phone/SHOPE-PHONE2.png",
       badge: "5%",
+      loading: "lazy",
     },
 
     {
@@ -80,6 +87,7 @@ const products = {
       price: "41,000,000",
       image: "shopeimage/phone/SHOPE-PHNE3.png",
       badge: "15%",
+      loading: "lazy",
     },
 
     {
@@ -88,6 +96,7 @@ const products = {
       price: "37,500,000",
       image: "shopeimage/phone/SHOPE-PHNE5.png",
       badge: "7%",
+      loading: "lazy",
     },
 
     {
@@ -96,6 +105,7 @@ const products = {
       price: "58,000,000",
       image: "shopeimage/phone/SHOPE-PHNE4.png",
       badge: "11%",
+      loading: "lazy",
     },
 
     {
@@ -104,6 +114,7 @@ const products = {
       price: "58,000,000",
       image: "shopeimage/phone/SHOPE-PHNE8.png",
       badge: "11%",
+      loading: "lazy",
     },
 
     {
@@ -112,6 +123,7 @@ const products = {
       price: "58,000,000",
       image: "shopeimage/phone/SHOPE-PHNE6.png",
       badge: "11%",
+      loading: "lazy",
     },
 
     {
@@ -120,6 +132,7 @@ const products = {
       price: "58,000,000",
       image: "shopeimage/phone/SHOPE-PHNE7.png",
       badge: "11%",
+      loading: "lazy",
     },
 
     {
@@ -128,6 +141,7 @@ const products = {
       price: "58,000,000",
       image: "shopeimage/phone/SHOPE-PHNE10.png",
       badge: "11%",
+      loading: "lazy",
     },
 
     {
@@ -136,6 +150,7 @@ const products = {
       price: "58,000,000",
       image: "shopeimage/phone/SHOPE-PHNE9.png",
       badge: "11%",
+      loading: "lazy",
     },
   ],
 
@@ -150,6 +165,7 @@ const products = {
       price: "38,000,000",
       image: "image/monitor1.png",
       badge: "12%",
+      loading: "lazy",
     },
 
     {
@@ -158,6 +174,7 @@ const products = {
       price: "42,000,000",
       image: "image/monitor2.png",
       badge: "8%",
+      loading: "lazy",
     },
 
     {
@@ -166,6 +183,7 @@ const products = {
       price: "31,000,000",
       image: "image/monitor3.png",
       badge: "18%",
+      loading: "lazy",
     },
 
     {
@@ -174,6 +192,7 @@ const products = {
       price: "26,000,000",
       image: "image/monitor4.png",
       badge: "10%",
+      loading: "lazy",
     },
 
     {
@@ -182,6 +201,7 @@ const products = {
       price: "36,000,000",
       image: "image/monitor5.png",
       badge: "9%",
+      loading: "lazy",
     },
   ],
 
@@ -196,6 +216,7 @@ const products = {
       price: "16,900,000",
       image: "image/headphone1.png",
       badge: "12%",
+      loading: "lazy",
     },
 
     {
@@ -204,6 +225,7 @@ const products = {
       price: "18,500,000",
       image: "image/headphone2.png",
       badge: "6%",
+      loading: "lazy",
     },
 
     {
@@ -212,6 +234,7 @@ const products = {
       price: "9,200,000",
       image: "image/headphone3.png",
       badge: "15%",
+      loading: "lazy",
     },
 
     {
@@ -220,6 +243,7 @@ const products = {
       price: "4,900,000",
       image: "image/headphone4.png",
       badge: "20%",
+      loading: "lazy",
     },
 
     {
@@ -228,6 +252,7 @@ const products = {
       price: "7,500,000",
       image: "image/headphone5.png",
       badge: "10%",
+      loading: "lazy",
     },
   ],
 
@@ -242,6 +267,7 @@ const products = {
       price: "4,200,000",
       image: "image/acc1.png",
       badge: "18%",
+      loading: "lazy",
     },
 
     {
@@ -250,6 +276,7 @@ const products = {
       price: "3,100,000",
       image: "image/acc2.png",
       badge: "10%",
+      loading: "lazy",
     },
 
     {
@@ -258,6 +285,7 @@ const products = {
       price: "1,400,000",
       image: "image/acc3.png",
       badge: "15%",
+      loading: "lazy",
     },
 
     {
@@ -266,6 +294,7 @@ const products = {
       price: "1,800,000",
       image: "image/acc4.png",
       badge: "8%",
+      loading: "lazy",
     },
 
     {
@@ -274,6 +303,7 @@ const products = {
       price: "5,700,000",
       image: "image/acc5.png",
       badge: "12%",
+      loading: "lazy",
     },
   ],
 };
