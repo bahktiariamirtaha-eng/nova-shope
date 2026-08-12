@@ -1110,7 +1110,7 @@ nav ul li a:hover {
 
   header {
     width: 90%;
-    height: 10%;
+    height: 30%;
     padding: 15px;
     margin: auto;
     display: flex;
@@ -1183,7 +1183,7 @@ nav ul li a:hover {
 
   .features {
     width: 95%;
-    margin-top: -100%;
+    margin-top: -70%;
     gap: 15px;
     font-size: 12px;
   }
