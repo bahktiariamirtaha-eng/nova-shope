@@ -3,296 +3,337 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shope</title>
+    <title>Document</title>
     <title>فروشگاه | Nova Digital</title>
+
     <link rel="stylesheet" href="shop.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
   <body>
-    <!doctype html>
-    <html lang="fa" dir="rtl">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ================= HEADER ================= -->
 
-        <title>فروشگاه | Nova Digital</title>
+    <header>
+      <div class="header-container">
+        <!-- دایره + آیکون‌ها -->
+        <div class="header-actions">
+          <button
+            class="header-menu-toggle"
+            type="button"
+            aria-label="باز کردن منو"
+          >
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
 
-        <link rel="stylesheet" href="shop.css" />
+          <div class="header-menu-items">
+            <a
+              href="favorites.html"
+              class="header-menu-item"
+              aria-label="علاقه‌مندی‌ها"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </a>
 
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        />
-      </head>
+            <a
+              href="account.html"
+              class="header-menu-item"
+              aria-label="حساب کاربری"
+            >
+              <i class="fa-regular fa-user"></i>
+            </a>
 
-      <body>
-        <!-- ================= HEADER ================= -->
-
-        <header>
-          <div class="header-container">
-            <!-- دایره + آیکون‌ها -->
-            <div class="header-actions">
-              <button
-                class="header-menu-toggle"
-                type="button"
-                aria-label="باز کردن منو"
-              >
-                <i class="fa-solid fa-ellipsis"></i>
-              </button>
-
-              <div class="header-menu-items">
-                <a
-                  href="favorites.html"
-                  class="header-menu-item"
-                  aria-label="علاقه‌مندی‌ها"
-                >
-                  <i class="fa-regular fa-heart"></i>
-                </a>
-
-                <a
-                  href="account.html"
-                  class="header-menu-item"
-                  aria-label="حساب کاربری"
-                >
-                  <i class="fa-regular fa-user"></i>
-                </a>
-
-                <a
-                  href="cart.html"
-                  class="header-menu-item"
-                  aria-label="سبد خرید"
-                >
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-              </div>
-            </div>
+            <a href="cart.html" class="header-menu-item" aria-label="سبد خرید">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </div>
-        </header>
+        </div>
+      </div>
+    </header>
 
-        <!-- ================= BREADCRUMB ================= -->
+    <!-- ================= BREADCRUMB ================= -->
 
-        <section class="breadcrumb">
-          <a href="index.html"> خانه </a>
+    <section class="breadcrumb">
+      <a href="index.html"> خانه </a>
 
-          <i class="fa-solid fa-angle-left"></i>
+      <i class="fa-solid fa-angle-left"></i>
 
-          <span> فروشگاه </span>
+      <span> فروشگاه </span>
+    </section>
+
+    <!-- ================= SHOP ================= -->
+
+    <section class="shop">
+      <!-- ================= SIDEBAR ================= -->
+
+      <aside class="shop-sidebar">
+        <h2>فیلتر محصولات</h2>
+
+        <!-- Category Filter -->
+
+        <div class="filter-box">
+          <h3>دسته بندی</h3>
+
+          <label>
+            <input type="checkbox" />
+            لپ تاپ
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            موبایل
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            مانیتور
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            هدفون
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            لوازم جانبی
+          </label>
+        </div>
+
+        <!-- Brand Filter -->
+
+        <div class="filter-box">
+          <h3>برند</h3>
+
+          <label>
+            <input type="checkbox" />
+            ASUS
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            Apple
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            Samsung
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            Lenovo
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            MSI
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            HP
+          </label>
+        </div>
+
+        <!-- Price Filter -->
+
+        <div class="filter-box">
+          <h3>محدوده قیمت</h3>
+
+          <input type="range" min="0" max="100" />
+        </div>
+      </aside>
+
+      <!-- ================= CONTENT ================= -->
+
+      <main class="shop-content">
+        <!-- ================= LAPTOPS ================= -->
+
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>💻 لپ تاپ</h2>
+
+            <a href="#"> مشاهده همه </a>
+          </div>
+
+          <div class="products-grid" id="laptops"></div>
+
+          <div class="load-more-container">
+            <button type="button" class="load-more-btn" data-category="laptops">
+              نمایش بیشتر
+
+              <i class="fa-solid fa-chevron-down"></i>\
+            </button>
+          </div>
         </section>
 
-        <!-- ================= SHOP ================= -->
+        <!-- ================= MOBILES ================= -->
 
-        <section class="shop">
-          <!-- ================= SIDEBAR ================= -->
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>📱 موبایل</h2>
 
-          <aside class="shop-sidebar">
-            <h2>فیلتر محصولات</h2>
+            <a href="#"> مشاهده همه </a>
+          </div>
 
-            <!-- Category Filter -->
+          <div class="products-grid" id="mobiles"></div>
 
-            <div class="filter-box">
-              <h3>دسته بندی</h3>
+          <div class="load-more-container">
+            <button type="button" class="load-more-btn" data-category="mobiles">
+              نمایش بیشتر
 
-              <label>
-                <input type="checkbox" />
-                لپ تاپ
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                موبایل
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                مانیتور
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                هدفون
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                لوازم جانبی
-              </label>
-            </div>
-
-            <!-- Brand Filter -->
-
-            <div class="filter-box">
-              <h3>برند</h3>
-
-              <label>
-                <input type="checkbox" />
-                ASUS
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                Apple
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                Samsung
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                Lenovo
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                MSI
-              </label>
-
-              <label>
-                <input type="checkbox" />
-                HP
-              </label>
-            </div>
-
-            <!-- Price Filter -->
-
-            <div class="filter-box">
-              <h3>محدوده قیمت</h3>
-
-              <input type="range" min="0" max="100" />
-            </div>
-          </aside>
-
-          <!-- ================= CONTENT ================= -->
-
-          <main class="shop-content">
-            <!-- ================= LAPTOPS ================= -->
-
-            <section class="shop-section">
-              <div class="section-header">
-                <h2>💻 لپ تاپ</h2>
-
-                <a href="#"> مشاهده همه </a>
-              </div>
-
-              <div class="products-grid" id="laptops"></div>
-
-              <div class="load-more-container">
-                <button
-                  type="button"
-                  class="load-more-btn"
-                  data-category="laptops"
-                >
-                  نمایش بیشتر
-
-                  <i class="fa-solid fa-chevron-down"></i>\
-                </button>
-              </div>
-            </section>
-
-            <!-- ================= MOBILES ================= -->
-
-            <section class="shop-section">
-              <div class="section-header">
-                <h2>📱 موبایل</h2>
-
-                <a href="#"> مشاهده همه </a>
-              </div>
-
-              <div class="products-grid" id="mobiles"></div>
-
-              <div class="load-more-container">
-                <button
-                  type="button"
-                  class="load-more-btn"
-                  data-category="mobiles"
-                >
-                  نمایش بیشتر
-
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </div>
-            </section>
-
-            <!-- ================= MONITORS ================= -->
-
-            <section class="shop-section">
-              <div class="section-header">
-                <h2>🖥 مانیتور</h2>
-
-                <a href="#"> مشاهده همه </a>
-              </div>
-
-              <div class="products-grid" id="monitors"></div>
-
-              <div class="load-more-container">
-                <button
-                  type="button"
-                  class="load-more-btn"
-                  data-category="monitors"
-                >
-                  نمایش بیشتر
-
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </div>
-            </section>
-
-            <!-- ================= HEADPHONES ================= -->
-
-            <section class="shop-section">
-              <div class="section-header">
-                <h2>🎧 هدفون</h2>
-
-                <a href="#"> مشاهده همه </a>
-              </div>
-
-              <div class="products-grid" id="headphones"></div>
-
-              <div class="load-more-container">
-                <button
-                  type="button"
-                  class="load-more-btn"
-                  data-category="headphones"
-                >
-                  نمایش بیشتر
-
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </div>
-            </section>
-
-            <!-- ================= ACCESSORIES ================= -->
-
-            <section class="shop-section">
-              <div class="section-header">
-                <h2>⌨️ لوازم جانبی</h2>
-
-                <a href="#"> مشاهده همه </a>
-              </div>
-
-              <div class="products-grid" id="accessories"></div>
-
-              <div class="load-more-container">
-                <button
-                  type="button"
-                  class="load-more-btn"
-                  data-category="accessories"
-                >
-                  نمایش بیشتر
-
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </div>
-            </section>
-          </main>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
         </section>
 
-        <script src="shop.js"></script>
-      </body>
-    </html>
+        <!-- ================= MONITORS ================= -->
+
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>🖥 مانیتور</h2>
+
+            <a href="#"> مشاهده همه </a>
+          </div>
+
+          <div class="products-grid" id="monitors"></div>
+
+          <div class="load-more-container">
+            <button
+              type="button"
+              class="load-more-btn"
+              data-category="monitors"
+            >
+              نمایش بیشتر
+
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= HEADPHONES ================= -->
+
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>🎧 هدفون</h2>
+
+            <a href="#"> مشاهده همه </a>
+          </div>
+
+          <div class="products-grid" id="headphones"></div>
+
+          <div class="load-more-container">
+            <button
+              type="button"
+              class="load-more-btn"
+              data-category="headphones"
+            >
+              نمایش بیشتر
+
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= ACCESSORIES ================= -->
+
+        <section class="shop-section">
+          <div class="section-header">
+            <h2>⌨️ لوازم جانبی</h2>
+
+            <a href="#"> مشاهده همه </a>
+          </div>
+
+          <div class="products-grid" id="accessories"></div>
+
+          <div class="load-more-container">
+            <button
+              type="button"
+              class="load-more-btn"
+              data-category="accessories"
+            >
+              نمایش بیشتر
+
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <!-- =========================================
+                     Product Modal
+        ========================================= -->
+
+    <div class="product-modal" id="productModal">
+      <div class="modal-overlay" id="modalOverlay"></div>
+
+      <div class="modal-content">
+        <!-- Close -->
+
+        <button
+          type="button"
+          class="modal-close"
+          id="modalClose"
+          aria-label="بستن"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Product Image -->
+
+        <div class="modal-image">
+          <img id="modalProductImage" src="" alt="" />
+        </div>
+
+        <!-- Product Information -->
+
+        <div class="modal-info">
+          <span class="modal-badge" id="modalProductBadge"> تخفیف </span>
+
+          <h2 id="modalProductName">نام محصول</h2>
+
+          <p class="modal-spec" id="modalProductSpec">مشخصات محصول</p>
+
+          <div class="modal-price" id="modalProductPrice">0 تومان</div>
+
+          <!-- Actions -->
+
+          <div class="modal-actions">
+            <button type="button" class="modal-cart-btn" id="modalAddToCart">
+              <i class="fa-solid fa-cart-plus"></i>
+
+              افزودن به سبد خرید
+            </button>
+
+            <button
+              type="button"
+              class="modal-favorite-btn"
+              id="modalFavorite"
+              aria-label="افزودن به علاقه‌مندی"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <!-- Product Page -->
+
+          <a
+            href="product.html"
+            class="modal-product-link"
+            id="modalProductLink"
+          >
+            مشاهده اطلاعات کامل محصول
+
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="shop.js"></script>
   </body>
 </html>
