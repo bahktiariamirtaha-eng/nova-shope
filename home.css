@@ -1108,8 +1108,7 @@ nav ul li a:hover {
 
   header {
     width: 90%;
-    height:65px;
-    height: 30%;
+    height:35px;
     padding: 15px;
     margin: auto;
     display: flex;
