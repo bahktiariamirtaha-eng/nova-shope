@@ -69,7 +69,12 @@
       <!-- ================= SIDEBAR ================= -->
 
       <aside class="shop-sidebar">
-        <h2>فیلتر محصولات</h2>
+        <div class="filter-head">
+          <h2>فیلتر محصولات</h2>
+          <button type="button" id="clearFilters" class="clear-filters-btn">
+            پاک کردن فیلترها
+          </button>
+        </div>
 
         <!-- Category Filter -->
 
@@ -77,27 +82,27 @@
           <h3>دسته بندی</h3>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-category" value="laptops" />
             لپ تاپ
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-category" value="mobiles" />
             موبایل
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-category" value="monitors" />
             مانیتور
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-category" value="headphones" />
             هدفون
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-category" value="accessories" />
             لوازم جانبی
           </label>
         </div>
@@ -108,32 +113,32 @@
           <h3>برند</h3>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-brand" value="ASUS" />
             ASUS
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-brand" value="Apple" />
             Apple
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-brand" value="Samsung" />
             Samsung
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-brand" value="Lenovo" />
             Lenovo
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-brand" value="MSI" />
             MSI
           </label>
 
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" class="filter-brand" value="HP" />
             HP
           </label>
         </div>
@@ -143,7 +148,22 @@
         <div class="filter-box">
           <h3>محدوده قیمت</h3>
 
-          <input type="range" min="0" max="100" />
+          <input
+            type="range"
+            id="priceFilter"
+            min="1000000"
+            max="100000000"
+            step="1000000"
+            value="100000000"
+          />
+          <div class="price-filter-value">
+            تا <span id="priceFilterValue">100,000,000</span> تومان
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="filter-empty" id="filterEmpty" style="display: none">
+          محصولی با این فیلترها پیدا نشد
         </div>
       </aside>
 
@@ -319,6 +339,7 @@
       </div>
     </div>
 
+    <script src="products-data.js"></script>
     <script src="shop.js"></script>
   </body>
 </html>

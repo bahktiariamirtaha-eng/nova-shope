@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ورود و ثبت‌نام | Nova Digital</title>
+
+    <link rel="stylesheet" href="account.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-actions">
+          <button
+            class="header-menu-toggle"
+            type="button"
+            aria-label="باز کردن منو"
+          >
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+
+          <div class="header-menu-items">
+            <a
+              href="favorites.html"
+              class="header-menu-item"
+              aria-label="علاقه‌مندی‌ها"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </a>
+
+            <a
+              href="index.html"
+              class="header-menu-item"
+              aria-label="خانه"
+            >
+              <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="cart.html" class="header-menu-item" aria-label="سبد خرید">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+
+    <section class="breadcrumb">
+      <a href="index.html"> خانه </a>
+
+      <i class="fa-solid fa-angle-left"></i>
+
+      <span> ورود و ثبت‌نام </span>
+    </section>
+
+    <!-- Auth -->
+
+    <main class="auth-page">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <div class="auth-badge"><i class="fa-solid fa-bolt"></i></div>
+          <h1>نوا دیجیتال</h1>
+          <p>برای ادامه، وارد حساب خودت شو یا یه حساب جدید بساز</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button type="button" class="auth-tab active" data-tab="login">
+            ورود
+          </button>
+          <button type="button" class="auth-tab" data-tab="signup">
+            ثبت‌نام
+          </button>
+        </div>
+
+        <!-- LOGIN -->
+
+        <form class="auth-form active" id="loginForm" data-form="login">
+          <div class="input-group">
+            <label for="loginPhone">شماره موبایل یا ایمیل</label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input
+                type="text"
+                id="loginPhone"
+                placeholder="مثلاً 09123456789"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="loginPassword">رمز عبور</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="رمز عبور خود را وارد کنید"
+                required
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="نمایش رمز عبور"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-row">
+            <label class="remember-me">
+              <input type="checkbox" id="rememberMe" />
+              مرا به خاطر بسپار
+            </label>
+            <a href="#" class="forgot-link">رمز عبور را فراموش کرده‌اید؟</a>
+          </div>
+
+          <p class="form-error" id="loginError"></p>
+
+          <button type="submit" class="auth-submit">
+            ورود به حساب
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+        </form>
+
+        <!-- SIGNUP -->
+
+        <form class="auth-form" id="signupForm" data-form="signup">
+          <div class="input-group">
+            <label for="signupName">نام و نام خانوادگی</label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input
+                type="text"
+                id="signupName"
+                placeholder="مثلاً علی احمدی"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="signupPhone">شماره موبایل</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <input
+                type="text"
+                id="signupPhone"
+                placeholder="مثلاً 09123456789"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="signupPassword">رمز عبور</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                id="signupPassword"
+                placeholder="حداقل ۶ کاراکتر"
+                required
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="نمایش رمز عبور"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="signupPasswordConfirm">تکرار رمز عبور</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                id="signupPasswordConfirm"
+                placeholder="رمز عبور را دوباره وارد کنید"
+                required
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="نمایش رمز عبور"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <label class="remember-me terms-check">
+            <input type="checkbox" id="acceptTerms" />
+            <span
+              >با
+              <a href="#">قوانین و مقررات</a>
+              نوا دیجیتال موافقم</span
+            >
+          </label>
+
+          <p class="form-error" id="signupError"></p>
+
+          <button type="submit" class="auth-submit">
+            ایجاد حساب کاربری
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          <span data-only="login"
+            >حساب کاربری نداری؟
+            <a href="#" data-switch-to="signup">ثبت‌نام کن</a></span
+          >
+          <span data-only="signup" style="display: none"
+            >قبلاً ثبت‌نام کرده‌ای؟
+            <a href="#" data-switch-to="login">وارد شو</a></span
+          >
+        </p>
+      </div>
+    </main>
+
+    <script src="account.js"></script>
+  </body>
+</html>

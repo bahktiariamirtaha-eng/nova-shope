@@ -563,3 +563,123 @@ a {
     font-size: 20px;
   }
 }
+
+/* =========================================
+   HEADER (ported from shop.css, for consistency)
+========================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 9999;
+}
+
+.header-menu-toggle {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: 0.35s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.header-menu-toggle i {
+  font-size: 18px;
+  transition: 0.35s ease;
+}
+
+.header-menu-toggle:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.25);
+}
+
+.header-menu-items {
+  position: absolute;
+  top: 58px;
+  right: 50%;
+  transform: translateX(50%) scale(0.7);
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.35s ease;
+  z-index: 9;
+}
+
+.header-actions.active .header-menu-items {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) scale(1);
+}
+
+.header-actions.active .header-menu-toggle {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.header-actions.active .header-menu-toggle i {
+  transform: rotate(90deg);
+}
+
+.header-menu-item {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #a8b3cf;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-menu-item i {
+  font-size: 17px;
+}
+
+.header-menu-item:hover {
+  color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.3);
+}
+
+.header-menu-item .cart-count {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 20px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

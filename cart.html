@@ -16,7 +16,40 @@
 
   <body>
     <header>
-      <!-- هدر اصلی سایت بعداً اینجا قرار می‌گیرد -->
+      <div class="header-container">
+        <div class="header-actions">
+          <button
+            class="header-menu-toggle"
+            type="button"
+            aria-label="باز کردن منو"
+          >
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+
+          <div class="header-menu-items">
+            <a
+              href="favorites.html"
+              class="header-menu-item"
+              aria-label="علاقه‌مندی‌ها"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </a>
+
+            <a
+              href="account.html"
+              class="header-menu-item"
+              aria-label="حساب کاربری"
+            >
+              <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="cart.html" class="header-menu-item" aria-label="سبد خرید">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Breadcrumb -->
@@ -87,9 +120,7 @@
       </div>
     </main>
 
-    <footer>
-      <!-- فوتر اصلی سایت -->
-    </footer>
+    <footer></footer>
 
     <script src="cart.js"></script>
   </body>

@@ -243,6 +243,63 @@ header {
   margin-bottom: 35px;
 }
 
+.filter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.filter-head h2 {
+  margin-bottom: 0;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.clear-filters-btn:hover {
+  color: var(--primary);
+}
+
+.price-filter-value {
+  margin-top: 14px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  direction: ltr;
+  text-align: left;
+}
+
+.price-filter-value span {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.filter-empty {
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255, 77, 109, 0.08);
+  color: #ff8296;
+  font-size: 13px;
+  text-align: center;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  padding: 30px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
 /* ================= Filter ================= */
 
 .filter-box {

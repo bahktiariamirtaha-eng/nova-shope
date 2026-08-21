@@ -6,232 +6,6 @@
 // PRODUCTS
 // ======================================================
 
-const products = {
-  laptops: [
-    {
-      name: "ASUS TUF F15",
-      spec: "Core i7 • RTX4060",
-      price: "72,900,000",
-      image: "shopeimage/laptop/image-laptop-1.png",
-      badge: "15%",
-    },
-    {
-      name: "Lenovo Legion 5",
-      spec: "Ryzen 7 • RTX4060",
-      price: "69,500,000",
-      image: "shopeimage/laptop/image-laptop-2.png",
-      badge: "12%",
-    },
-    {
-      name: "MSI Katana",
-      spec: "Core i7 • RTX4050",
-      price: "67,800,000",
-      image: "shopeimage/laptop/image-laptop-3.png",
-      badge: "10%",
-    },
-    {
-      name: "HP Victus",
-      spec: "Ryzen 5 • RTX3050",
-      price: "55,900,000",
-      image: "shopeimage/laptop/image-laptop-4.png",
-      badge: "8%",
-    },
-    {
-      name: "MacBook Air M3",
-      spec: "Apple M3 • 16GB",
-      price: "95,000,000",
-      image: "shopeimage/laptop/image-laptop-5.png",
-      badge: "5%",
-    },
-  ],
-
-  mobiles: [
-    {
-      name: "Galaxy S25 Ultra",
-      spec: "512GB",
-      price: "64,900,000",
-      image: "shopeimage/phone/SOPHE-PHONE1.png",
-      badge: "10%",
-    },
-    {
-      name: "iPhone 16 Pro",
-      spec: "256GB",
-      price: "98,000,000",
-      image: "shopeimage/phone/SHOPE-PHONE2.png",
-      badge: "5%",
-    },
-    {
-      name: "Xiaomi 15",
-      spec: "512GB",
-      price: "41,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE3.png",
-      badge: "15%",
-    },
-    {
-      name: "Nothing Phone 3",
-      spec: "256GB",
-      price: "37,500,000",
-      image: "shopeimage/phone/SHOPE-PHNE5.png",
-      badge: "7%",
-    },
-    {
-      name: "Pixel 10 Pro",
-      spec: "256GB",
-      price: "58,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE4.png",
-      badge: "11%",
-    },
-    {
-      name: "realme GT7",
-      spec: "256GB",
-      price: "58,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE8.png",
-      badge: "11%",
-    },
-    {
-      name: "OnePlus 13",
-      spec: "256GB",
-      price: "58,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE6.png",
-      badge: "11%",
-    },
-    {
-      name: "POCO F6 Pro",
-      spec: "256GB",
-      price: "58,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE7.png",
-      badge: "11%",
-    },
-    {
-      name: "iPhone SE (2022)",
-      spec: "256GB",
-      price: "58,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE10.png",
-      badge: "11%",
-    },
-    {
-      name: "Galaxy A56 5G",
-      spec: "256GB",
-      price: "58,000,000",
-      image: "shopeimage/phone/SHOPE-PHNE9.png",
-      badge: "11%",
-    },
-  ],
-
-  monitors: [
-    {
-      name: "LG UltraWide",
-      spec: "34 Inch",
-      price: "38,000,000",
-      image: "image/monitor1.png",
-      badge: "12%",
-    },
-    {
-      name: "ASUS ProArt",
-      spec: "32 Inch",
-      price: "42,000,000",
-      image: "image/monitor2.png",
-      badge: "8%",
-    },
-    {
-      name: "Samsung Odyssey",
-      spec: "27 Inch",
-      price: "31,000,000",
-      image: "image/monitor3.png",
-      badge: "18%",
-    },
-    {
-      name: "MSI Gaming",
-      spec: "165Hz",
-      price: "26,000,000",
-      image: "image/monitor4.png",
-      badge: "10%",
-    },
-    {
-      name: "BenQ Designer",
-      spec: "4K",
-      price: "36,000,000",
-      image: "image/monitor5.png",
-      badge: "9%",
-    },
-  ],
-
-  headphones: [
-    {
-      name: "Sony XM5",
-      spec: "Wireless",
-      price: "16,900,000",
-      image: "image/headphone1.png",
-      badge: "12%",
-    },
-    {
-      name: "AirPods Pro 2",
-      spec: "USB-C",
-      price: "18,500,000",
-      image: "image/headphone2.png",
-      badge: "6%",
-    },
-    {
-      name: "Galaxy Buds 3",
-      spec: "ANC",
-      price: "9,200,000",
-      image: "image/headphone3.png",
-      badge: "15%",
-    },
-    {
-      name: "JBL Tune",
-      spec: "Bluetooth",
-      price: "4,900,000",
-      image: "image/headphone4.png",
-      badge: "20%",
-    },
-    {
-      name: "Razer BlackShark",
-      spec: "Gaming",
-      price: "7,500,000",
-      image: "image/headphone5.png",
-      badge: "10%",
-    },
-  ],
-
-  accessories: [
-    {
-      name: "Mechanical Keyboard",
-      spec: "RGB",
-      price: "4,200,000",
-      image: "image/acc1.png",
-      badge: "18%",
-    },
-    {
-      name: "Gaming Mouse",
-      spec: "Wireless",
-      price: "3,100,000",
-      image: "image/acc2.png",
-      badge: "10%",
-    },
-    {
-      name: "USB Hub",
-      spec: "Type-C",
-      price: "1,400,000",
-      image: "image/acc3.png",
-      badge: "15%",
-    },
-    {
-      name: "Laptop Stand",
-      spec: "Aluminium",
-      price: "1,800,000",
-      image: "image/acc4.png",
-      badge: "8%",
-    },
-    {
-      name: "SSD 1TB",
-      spec: "NVMe",
-      price: "5,700,000",
-      image: "image/acc5.png",
-      badge: "12%",
-    },
-  ],
-};
 
 // ======================================================
 // SETTINGS
@@ -246,6 +20,119 @@ const visibleProducts = {
   headphones: 4,
   accessories: 4,
 };
+
+// ======================================================
+// FILTERS
+// ======================================================
+
+function parsePrice(price) {
+  return Number(String(price).replace(/[^\d.-]/g, "")) || 0;
+}
+
+function getActiveFilters() {
+  const categories = Array.from(
+    document.querySelectorAll(".filter-category:checked"),
+  ).map((el) => el.value);
+
+  const brands = Array.from(
+    document.querySelectorAll(".filter-brand:checked"),
+  ).map((el) => el.value);
+
+  const priceInput = document.getElementById("priceFilter");
+  const maxPrice = priceInput ? Number(priceInput.value) : Infinity;
+
+  return { categories, brands, maxPrice };
+}
+
+function productMatchesFilters(product, category, filters) {
+  if (filters.categories.length && !filters.categories.includes(category)) {
+    return false;
+  }
+
+  if (filters.brands.length && !filters.brands.includes(product.brand)) {
+    return false;
+  }
+
+  if (parsePrice(product.price) > filters.maxPrice) {
+    return false;
+  }
+
+  return true;
+}
+
+function applyFilters() {
+  const filters = getActiveFilters();
+  let anyVisible = false;
+
+  Object.keys(products).forEach((category) => {
+    const section = document
+      .getElementById(category)
+      ?.closest(".shop-section");
+
+    const categoryAllowed =
+      !filters.categories.length || filters.categories.includes(category);
+
+    if (section) {
+      section.style.display = categoryAllowed ? "" : "none";
+    }
+
+    if (!categoryAllowed) return;
+
+    const filteredCount = products[category].filter((p) =>
+      productMatchesFilters(p, category, filters),
+    ).length;
+
+    if (filteredCount > 0) anyVisible = true;
+
+    renderCategory(category, filters);
+    updateLoadMoreButton(category, filters);
+  });
+
+  const emptyState = document.getElementById("filterEmpty");
+  if (emptyState) {
+    emptyState.style.display = anyVisible ? "none" : "block";
+  }
+}
+
+function initFilters() {
+  const priceInput = document.getElementById("priceFilter");
+  const priceValueLabel = document.getElementById("priceFilterValue");
+
+  if (priceInput && priceValueLabel) {
+    priceValueLabel.textContent = Number(priceInput.value).toLocaleString(
+      "en-US",
+    );
+
+    priceInput.addEventListener("input", () => {
+      priceValueLabel.textContent = Number(priceInput.value).toLocaleString(
+        "en-US",
+      );
+      applyFilters();
+    });
+  }
+
+  document
+    .querySelectorAll(".filter-category, .filter-brand")
+    .forEach((el) => el.addEventListener("change", applyFilters));
+
+  const clearBtn = document.getElementById("clearFilters");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".filter-category, .filter-brand")
+        .forEach((el) => (el.checked = false));
+
+      if (priceInput) {
+        priceInput.value = priceInput.max;
+        priceValueLabel.textContent = Number(priceInput.max).toLocaleString(
+          "en-US",
+        );
+      }
+
+      applyFilters();
+    });
+  }
+}
 
 // ======================================================
 // CART
@@ -628,7 +515,7 @@ function createProductCard(product) {
 // RENDER CATEGORY
 // ======================================================
 
-function renderCategory(category) {
+function renderCategory(category, filters) {
   const container = document.getElementById(category);
 
   if (!container) return;
@@ -637,11 +524,22 @@ function renderCategory(category) {
 
   if (!categoryProducts) return;
 
-  const visibleCount = visibleProducts[category] || productsPerLoad;
+  const activeFilters = filters || getActiveFilters();
 
-  const visibleItems = categoryProducts.slice(0, visibleCount);
+  const filteredProducts = categoryProducts.filter((p) =>
+    productMatchesFilters(p, category, activeFilters),
+  );
 
-  container.innerHTML = visibleItems.map(createProductCard).join("");
+  const visibleCount = Math.min(
+    visibleProducts[category] || productsPerLoad,
+    filteredProducts.length,
+  );
+
+  const visibleItems = filteredProducts.slice(0, visibleCount);
+
+  container.innerHTML = visibleItems.length
+    ? visibleItems.map(createProductCard).join("")
+    : `<p class="no-results">محصولی با این فیلترها در این دسته پیدا نشد</p>`;
 
   // ------------------------------------------
   // Product Details / Modal
@@ -688,16 +586,27 @@ function renderCategory(category) {
 // LOAD MORE BUTTON
 // ======================================================
 
-function updateLoadMoreButton(category) {
+function updateLoadMoreButton(category, filters) {
   const button = document.querySelector(
     `.load-more-btn[data-category="${category}"]`,
   );
 
   if (!button) return;
 
-  const total = products[category].length;
+  const activeFilters = filters || getActiveFilters();
 
-  const visible = visibleProducts[category];
+  const total = products[category].filter((p) =>
+    productMatchesFilters(p, category, activeFilters),
+  ).length;
+
+  const visible = Math.min(visibleProducts[category], total);
+
+  if (total === 0) {
+    button.style.display = "none";
+    return;
+  }
+
+  button.style.display = "";
 
   if (visible >= total) {
     button.disabled = true;
@@ -735,9 +644,11 @@ function loadMore(category) {
     visibleProducts[category] = products[category].length;
   }
 
-  renderCategory(category);
+  const filters = getActiveFilters();
 
-  updateLoadMoreButton(category);
+  renderCategory(category, filters);
+
+  updateLoadMoreButton(category, filters);
 }
 
 // ======================================================
@@ -767,6 +678,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // هدر
   initHeaderMenu();
+
+  // فیلترها
+  initFilters();
 
   // Modal
   initModal();

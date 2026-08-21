@@ -57,15 +57,16 @@
 
         <!-- دسکتاپ -->
         <div class="header-icons">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-regular fa-user"></i>
+          <button type="button" class="search-trigger" aria-label="جستجو">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+         <a href="account.html"> <i class="fa-regular fa-user"></i></a>
           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
 
         <!-- موبایل -->
         <div class="mobile-icons">
           <a href="#"> <i class="fa-regular fa-heart"></i></a>
-          <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </div>
     </header>
@@ -595,6 +596,104 @@
     </footer>
     <!-- end footer -->
 
+    <!-- ==========================================
+     PRODUCT MODAL
+     ========================================== -->
+
+    <div class="product-modal" id="productModal">
+      <!-- Overlay -->
+      <div class="modal-overlay" id="modalOverlay"></div>
+
+      <!-- Modal Content -->
+      <div class="product-modal-content">
+        <!-- Close -->
+        <button
+          type="button"
+          class="modal-close"
+          id="modalClose"
+          aria-label="بستن"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Product Image -->
+        <div class="modal-image">
+          <img id="modalProductImage" src="" alt="" />
+        </div>
+
+        <!-- Product Information -->
+        <div class="modal-info">
+          <!-- Discount -->
+          <span class="modal-badge" id="modalProductBadge"> تخفیف </span>
+
+          <!-- Name -->
+          <h2 id="modalProductName">نام محصول</h2>
+
+          <!-- Specification -->
+          <p class="modal-spec" id="modalProductSpec">مشخصات محصول</p>
+
+          <!-- Price -->
+          <div class="modal-price" id="modalProductPrice">0 تومان</div>
+
+          <!-- Actions -->
+          <div class="modal-actions">
+            <!-- Add To Cart -->
+            <button type="button" class="modal-cart-btn" id="modalAddToCart">
+              <i class="fa-solid fa-cart-plus"></i>
+
+              افزودن به سبد خرید
+            </button>
+
+            <!-- Favorite -->
+            <button
+              type="button"
+              class="modal-favorite-btn"
+              id="modalFavorite"
+              aria-label="افزودن به علاقه‌مندی"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <!-- Product Details -->
+          <a
+            href="product.html"
+            class="modal-product-link"
+            id="modalProductLink"
+          >
+            مشاهده اطلاعات کامل محصول
+
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+     SEARCH OVERLAY
+     ========================================== -->
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-box">
+        <div class="search-input-row">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="جستجوی محصول... (مثلاً iPhone، لپ‌تاپ، هدفون)"
+            autocomplete="off"
+          />
+          <button type="button" id="closeSearch" aria-label="بستن جستجو">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="search-results" id="searchResults">
+          <p class="search-hint">برای جستجو شروع به تایپ کنید</p>
+        </div>
+      </div>
+    </div>
+
     <!-- start responsiv -->
     <nav class="bottom-nav">
       <a href="#" class="active">
@@ -607,17 +706,17 @@
         <span>دسته‌ها</span>
       </a>
 
-      <a href="#">
+      <button type="button" class="search-trigger">
         <i class="fa-solid fa-magnifying-glass"></i>
         <span>جستجو</span>
-      </a>
+      </button>
 
       <a href="cart.html">
         <i class="fa-solid fa-cart-shopping"></i>
         <span>سبد</span>
       </a>
 
-      <a href="#">
+      <a href="account.html">
         <i class="fa-regular fa-user"></i>
         <span>حساب</span>
       </a>
@@ -625,6 +724,7 @@
 
     <!-- end responsiv -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="products-data.js"></script>
     <script src="home.js"></script>
   </body>
 </html>

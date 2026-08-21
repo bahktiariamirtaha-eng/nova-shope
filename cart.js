@@ -23,8 +23,12 @@ function saveCart() {
 // Format Price
 // ==========================================
 
+function parsePrice(price) {
+  return Number(String(price).replace(/[^\d.-]/g, "")) || 0;
+}
+
 function formatPrice(price) {
-  return Number(price).toLocaleString("en-US");
+  return parsePrice(price).toLocaleString("en-US");
 }
 
 
@@ -159,7 +163,7 @@ function renderCart() {
   cart.forEach((product, index) => {
 
     const itemTotal =
-      Number(product.price) *
+      parsePrice(product.price) *
       product.quantity;
 
 
@@ -297,7 +301,7 @@ function updateSummary() {
     cart.reduce(
       (sum, product) =>
         sum +
-        Number(product.price) *
+        parsePrice(product.price) *
         product.quantity,
       0
     );
@@ -311,6 +315,10 @@ function updateSummary() {
       `${totalQuantity} محصول`;
 
   }
+
+  document.querySelectorAll(".cart-count").forEach((el) => {
+    el.textContent = totalQuantity;
+  });
 
 
   // Summary Count
@@ -379,6 +387,31 @@ if (checkoutBtn) {
 
 }
 
+
+// ==========================================
+// Header Menu Toggle
+// ==========================================
+
+function initHeaderMenu() {
+  const headerActions = document.querySelector(".header-actions");
+  const menuToggle = document.querySelector(".header-menu-toggle");
+
+  if (!headerActions || !menuToggle) return;
+
+  menuToggle.addEventListener("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    headerActions.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!headerActions.contains(event.target)) {
+      headerActions.classList.remove("active");
+    }
+  });
+}
+
+initHeaderMenu();
 
 // ==========================================
 // Render On Page Load
