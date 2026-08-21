@@ -372,9 +372,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (typeof products === "undefined") return [];
 
     return Object.keys(products).reduce((all, category) => {
-      return all.concat(
-        products[category].map((p) => ({ ...p, category })),
-      );
+      return all.concat(products[category].map((p) => ({ ...p, category })));
     }, []);
   }
 

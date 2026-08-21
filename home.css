@@ -1132,7 +1132,7 @@ nav ul li a:hover {
 
   header {
     width: 90%;
-    height:15%;
+    height:10%;
     padding: 15px;
     margin: auto;
     display: flex;
@@ -1277,7 +1277,6 @@ nav ul li a:hover {
   .categories {
     width: 92%;
     margin-top: 55%;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
