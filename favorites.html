@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>علاقه‌مندی‌ها | Nova Digital</title>
+
+    <link rel="stylesheet" href="favorites.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-actions">
+          <button
+            class="header-menu-toggle"
+            type="button"
+            aria-label="باز کردن منو"
+          >
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+
+          <div class="header-menu-items">
+            <a
+              href="account.html"
+              class="header-menu-item"
+              aria-label="حساب کاربری"
+            >
+              <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="index.html" class="header-menu-item" aria-label="خانه">
+              <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="cart.html" class="header-menu-item" aria-label="سبد خرید">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+
+    <section class="breadcrumb">
+      <a href="index.html"> خانه </a>
+
+      <i class="fa-solid fa-angle-left"></i>
+
+      <span> علاقه‌مندی‌ها </span>
+    </section>
+
+    <!-- Favorites -->
+
+    <main class="fav-page">
+      <div class="fav-header">
+        <h1>علاقه‌مندی‌ها</h1>
+        <span id="favCount">0 محصول</span>
+      </div>
+
+      <section class="fav-products" id="favProducts">
+        <!-- محصولات توسط JavaScript اینجا ساخته می‌شوند -->
+      </section>
+    </main>
+
+    <script src="favorites.js"></script>
+  </body>
+</html>
