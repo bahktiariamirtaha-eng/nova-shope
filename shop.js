@@ -132,6 +132,54 @@ function initFilters() {
       applyFilters();
     });
   }
+
+  // ------------------------------------------
+  // Mobile Drawer (باز/بسته کردن کشوی فیلتر)
+  // ------------------------------------------
+
+  const sidebar = document.getElementById("shopSidebar");
+  const overlay = document.getElementById("filterOverlay");
+  const toggleBtn = document.getElementById("filterToggleBtn");
+  const closeBtn = document.getElementById("filterCloseBtn");
+
+  function openFilterDrawer() {
+    if (!sidebar || !overlay) return;
+    sidebar.classList.add("open");
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeFilterDrawer() {
+    if (!sidebar || !overlay) return;
+    sidebar.classList.remove("open");
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", openFilterDrawer);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeFilterDrawer);
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", closeFilterDrawer);
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeFilterDrawer();
+  });
+
+  // فیلتر که اعمال شد (روی موبایل)، خودکار کشو رو ببند تا نتیجه دیده بشه
+  document
+    .querySelectorAll(".filter-category, .filter-brand")
+    .forEach((el) =>
+      el.addEventListener("change", () => {
+        if (window.innerWidth <= 992) closeFilterDrawer();
+      }),
+    );
 }
 
 // ======================================================

@@ -66,11 +66,28 @@
     <!-- ================= SHOP ================= -->
 
     <section class="shop">
+      <!-- دکمه‌ی باز کردن فیلتر، فقط تو موبایل دیده می‌شه -->
+      <button type="button" id="filterToggleBtn" class="filter-toggle-btn">
+        <i class="fa-solid fa-sliders"></i>
+        فیلتر محصولات
+      </button>
+
+      <!-- پس‌زمینه‌ی تیره‌ی پشت کشو، فقط تو موبایل -->
+      <div class="filter-overlay" id="filterOverlay"></div>
+
       <!-- ================= SIDEBAR ================= -->
 
-      <aside class="shop-sidebar">
+      <aside class="shop-sidebar" id="shopSidebar">
         <div class="filter-head">
           <h2>فیلتر محصولات</h2>
+          <button
+            type="button"
+            id="filterCloseBtn"
+            class="filter-close-btn"
+            aria-label="بستن فیلتر"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <button type="button" id="clearFilters" class="clear-filters-btn">
             پاک کردن فیلترها
           </button>

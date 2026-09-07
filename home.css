@@ -35,7 +35,8 @@ header {
   position: fixed;
   top: 30px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
+  -webkit-transform: translateX(-50%) translateZ(0);
   width: 92%;
   max-width: 1450px;
   height: 70px;
@@ -553,7 +554,7 @@ nav ul li a:hover {
   align-items: center;
   height: 230px;
   margin-top: 15px;
-  loading:lazay;
+  loading: lazay;
 }
 
 .product-image img {
@@ -728,7 +729,7 @@ nav ul li a:hover {
 .videos {
   width: 90%;
   margin: -20% auto;
-  loading: la
+  loading: la;
 }
 
 .section-title {
@@ -1126,13 +1127,14 @@ nav ul li a:hover {
   html,
   body {
     overflow-x: hidden;
+    padding-bottom: 100px;
   }
 
   /* ================= HEADER ================= */
 
   header {
     width: 90%;
-    height:10%;
+    height: 64px;
     padding: 15px;
     margin: auto;
     display: flex;
@@ -1181,7 +1183,10 @@ nav ul li a:hover {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
-    margin-top: 40%;
+    min-height: auto;
+    margin: 50px 0;
+    padding-top: 110px;
+    padding-bottom: 30px;
   }
 
   .hero-image img {
@@ -1205,13 +1210,9 @@ nav ul li a:hover {
 
   .features {
     width: 95%;
-    margin-top: -80%;
+    margin: 40px auto 0;
     gap: 15px;
     font-size: 12px;
-  }
-
-  .features:hover {
-    display: none;
   }
 
   .line {
@@ -1276,7 +1277,8 @@ nav ul li a:hover {
 
   .categories {
     width: 92%;
-    margin-top: 55%;
+    margin: 60px auto;
+    padding: 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -1297,8 +1299,10 @@ nav ul li a:hover {
   }
 
   /* ================= PRODUCTS ================= */
-
-  .swiper-slide {
+  .section-title h2{
+    margin-top: 25px; 
+  }
+   .swiper-slide {
     width: 100%;
   }
 
@@ -1324,9 +1328,8 @@ nav ul li a:hover {
     margin: 0 auto;
     font-size: 13px;
   }
-
   .offer-text h2 {
-    margin: 10% auto;
+    margin: 20px auto;
     font-size: 18px;
     line-height: 1.7;
   }
@@ -1339,7 +1342,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto -30%;
+    margin: 20px auto 0;
   }
 
   /* ================= VIDEOS ================= */
@@ -1778,7 +1781,9 @@ nav ul li a:hover {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .search-overlay.active {
@@ -1906,5 +1911,101 @@ nav ul li a:hover {
 @media (max-width: 600px) {
   .search-overlay {
     padding: 70px 14px;
+  }
+}
+
+/* =========================================
+   TOP BANNER
+========================================= */
+
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
+  z-index: 10001;
+  background: linear-gradient(90deg, var(--primary), #3d73f4);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 44px;
+  text-align: center;
+}
+
+.top-banner p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.top-banner button {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s ease;
+}
+
+.top-banner button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* هدر رو به‌اندازه‌ی ارتفاع بنر پایین می‌کشیم تا روش نیفته */
+header {
+  top: 72px;
+  transition: top 0.3s ease;
+}
+
+body.banner-closed .top-banner {
+  display: none;
+}
+
+body.banner-closed header {
+  top: 30px;
+}
+
+@media (max-width: 440px) {
+  .top-banner {
+    height: 52px;
+    padding: 0 40px;
+  }
+
+  .top-banner p {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  .hero {
+    padding-top: 160px;
+  }
+
+  body.banner-closed .hero {
+    padding-top: 110px;
+  }
+}
+
+/* هدر که به‌خاطر بنر پایین‌تر رفته، رو صفحات بزرگ‌تر از موبایل هم
+   باعث می‌شه رو محتوای هیرو بیفته — این فاصله رو جبران می‌کنیم */
+@media (min-width: 441px) {
+  .hero {
+    padding-top: 42px;
+    transition: padding-top 0.3s ease;
+  }
+
+  body.banner-closed .hero {
+    padding-top: 0;
   }
 }

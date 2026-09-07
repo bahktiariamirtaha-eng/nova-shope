@@ -1,3 +1,21 @@
+// ==========================================
+// Top Banner
+// ==========================================
+
+(function initTopBanner() {
+  const closeBtn = document.getElementById("closeBanner");
+  if (!closeBtn) return;
+
+  if (localStorage.getItem("novaBannerClosed") === "1") {
+    document.body.classList.add("banner-closed");
+  }
+
+  closeBtn.addEventListener("click", function () {
+    document.body.classList.add("banner-closed");
+    localStorage.setItem("novaBannerClosed", "1");
+  });
+})();
+
 const swiper = new Swiper(".myProducts", {
   slidesPerView: 4,
 
@@ -372,7 +390,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (typeof products === "undefined") return [];
 
     return Object.keys(products).reduce((all, category) => {
-      return all.concat(products[category].map((p) => ({ ...p, category })));
+      return all.concat(
+        products[category].map((p) => ({ ...p, category })),
+      );
     }, []);
   }
 
