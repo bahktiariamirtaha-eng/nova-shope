@@ -1151,6 +1151,9 @@ nav ul li a:hover {
 
   header p {
     margin: auto;
+    padding: 10px;
+    width: 40%;
+    font-size: 12px;
   }
 
   header nav,
@@ -1184,7 +1187,7 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     min-height: auto;
-    margin: 50px 0;
+    margin: 0;
     padding-top: 110px;
     padding-bottom: 30px;
   }
@@ -1194,9 +1197,20 @@ nav ul li a:hover {
   }
 
   .hero-content h1 {
-    margin: auto;
+    margin: 0 auto 16px;
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .hero-content p {
+    width: 100%;
+    margin: 0 auto 24px;
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+
+  .hero-tag {
+    margin: 60px auto 16px;
   }
 
   .hero-btns {
@@ -1212,7 +1226,13 @@ nav ul li a:hover {
     width: 95%;
     margin: 40px auto 0;
     gap: 15px;
-    font-size: 12px;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+  .feature i {
+    display: none;
   }
 
   .line {
@@ -1235,10 +1255,11 @@ nav ul li a:hover {
     background: rgba(15, 15, 15, 0.82);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-
     z-index: 9999;
   }
-
+  .btn-secondary {
+    background: var(--primary);
+  }
   .bottom-nav a,
   .bottom-nav .search-trigger {
     flex: 1;
@@ -1277,11 +1298,21 @@ nav ul li a:hover {
 
   .categories {
     width: 92%;
-    margin: 60px auto;
-    padding: 15px;
+    margin: 40px auto 0;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .products {
+    width: 92%;
+    margin: 50px auto;
+  }
+
+  .offer {
+    width: 92%;
+    margin: 50px auto;
   }
 
   .cat-card {
@@ -1299,10 +1330,8 @@ nav ul li a:hover {
   }
 
   /* ================= PRODUCTS ================= */
-  .section-title h2{
-    margin-top: 25px; 
-  }
-   .swiper-slide {
+
+  .swiper-slide {
     width: 100%;
   }
 
@@ -1313,7 +1342,17 @@ nav ul li a:hover {
 
   /* ================= OFFER ================= */
 
+  .offer-text {
+    width: 100%;
+  }
+
+  .offer-image {
+    width: 100%;
+  }
+
   .offer-content {
+    height: auto;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column-reverse;
     gap: 30px;
@@ -1328,6 +1367,7 @@ nav ul li a:hover {
     margin: 0 auto;
     font-size: 13px;
   }
+
   .offer-text h2 {
     margin: 20px auto;
     font-size: 18px;
