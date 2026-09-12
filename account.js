@@ -106,15 +106,16 @@ switchLinks.forEach((link) => {
 document.querySelectorAll(".toggle-password").forEach((btn) => {
   btn.addEventListener("click", function () {
     const input = this.parentElement.querySelector("input");
-    const icon = this.querySelector("i");
+    const use = this.querySelector("use");
 
     if (!input) return;
 
     const isHidden = input.type === "password";
     input.type = isHidden ? "text" : "password";
 
-    icon.classList.toggle("fa-eye", !isHidden);
-    icon.classList.toggle("fa-eye-slash", isHidden);
+    if (use) {
+      use.setAttribute("href", isHidden ? "#icon-eye-slash" : "#icon-eye");
+    }
   });
 });
 

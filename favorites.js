@@ -119,7 +119,7 @@ function renderFavorites() {
   if (favorites.length === 0) {
     container.innerHTML = `
       <div class="empty-fav">
-        <i class="fa-regular fa-heart"></i>
+        <svg class="icon"><use href="#icon-heart-outline"></use></svg>
         <h2>لیست علاقه‌مندی خالی است</h2>
         <p>محصولی که دوست داری رو با زدن قلب، اینجا نگه‌دار.</p>
         <a href="shop.html">مشاهده محصولات</a>
@@ -138,7 +138,7 @@ function renderFavorites() {
         onclick="removeFavorite(${index})"
         aria-label="حذف از علاقه‌مندی‌ها"
       >
-        <i class="fa-solid fa-xmark"></i>
+        <svg class="icon"><use href="#icon-xmark"></use></svg>
       </button>
 
       <div class="fav-card-image">
@@ -157,7 +157,7 @@ function renderFavorites() {
           class="fav-add-cart"
           onclick='addToCart(${JSON.stringify(product)})'
         >
-          <i class="fa-solid fa-cart-plus"></i>
+          <svg class="icon"><use href="#icon-cart-plus"></use></svg>
           افزودن به سبد خرید
         </button>
       </div>

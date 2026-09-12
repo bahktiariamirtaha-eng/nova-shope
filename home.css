@@ -138,14 +138,14 @@ nav ul li a:hover {
   gap: 25px;
 }
 
-.header-icons i {
+.header-icons .icon {
   font-size: 18px;
   color: var(--text);
   cursor: pointer;
   transition: 0.3s;
 }
 
-.header-icons i:hover {
+.header-icons .icon:hover {
   color: var(--primary);
   transform: translateY(-3px);
 }
@@ -162,14 +162,14 @@ nav ul li a:hover {
   color: var(--text);
 }
 
-.header-icons .search-trigger i,
-.mobile-icons .search-trigger i {
+.header-icons .search-trigger .icon,
+.mobile-icons .search-trigger .icon {
   font-size: 18px;
   color: var(--text);
   transition: 0.3s;
 }
 
-.search-trigger:hover i {
+.search-trigger:hover .icon {
   color: var(--primary);
   transform: translateY(-3px);
 }
@@ -317,13 +317,13 @@ nav ul li a:hover {
   box-shadow: 0 15px 35px rgba(91, 140, 255, 0.25);
 }
 
-.feature i {
+.feature .icon {
   font-size: 24px;
   color: var(--primary);
   transition: 0.35s ease;
 }
 
-.feature:hover i {
+.feature:hover .icon {
   transform: scale(1.15);
   color: var(--primary-hover);
 }
@@ -424,13 +424,13 @@ nav ul li a:hover {
   left: -140%;
 }
 
-.cat-card i {
+.cat-card .icon {
   font-size: 46px;
   color: var(--primary);
   transition: 0.35s;
 }
 
-.cat-card:hover i {
+.cat-card:hover .icon {
   transform: scale(1.12);
 }
 
@@ -554,7 +554,7 @@ nav ul li a:hover {
   align-items: center;
   height: 230px;
   margin-top: 15px;
-  loading: lazay;
+  loading:lazay;
 }
 
 .product-image img {
@@ -603,11 +603,11 @@ nav ul li a:hover {
   color: var(--primary);
 }
 
-.product-info a i {
+.product-info a .icon {
   transition: 0.3s;
 }
 
-.product-info a:hover i {
+.product-info a:hover .icon {
   transform: translateX(-7px);
 }
 
@@ -729,7 +729,7 @@ nav ul li a:hover {
 .videos {
   width: 90%;
   margin: -20% auto;
-  loading: la;
+  loading: la
 }
 
 .section-title {
@@ -752,11 +752,11 @@ nav ul li a:hover {
   gap: 10px;
 }
 
-.section-title a i {
+.section-title a .icon {
   transition: 0.3s;
 }
 
-.section-title a:hover i {
+.section-title a:hover .icon {
   transform: translateX(-6px);
 }
 
@@ -1151,9 +1151,6 @@ nav ul li a:hover {
 
   header p {
     margin: auto;
-    padding: 10px;
-    width: 40%;
-    font-size: 12px;
   }
 
   header nav,
@@ -1169,14 +1166,14 @@ nav ul li a:hover {
     gap: 18px;
   }
 
-  .mobile-icons i {
+  .mobile-icons .icon {
     font-size: 16px;
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
   }
 
-  .mobile-icons i:hover {
+  .mobile-icons .icon:hover {
     color: var(--primary);
   }
   /* ================= HERO ================= */
@@ -1210,7 +1207,7 @@ nav ul li a:hover {
   }
 
   .hero-tag {
-    margin: 60px auto 16px;
+    margin: 0 auto 16px;
   }
 
   .hero-btns {
@@ -1226,13 +1223,7 @@ nav ul li a:hover {
     width: 95%;
     margin: 40px auto 0;
     gap: 15px;
-    font-size: 10px;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-  }
-  .feature i {
-    display: none;
+    font-size: 12px;
   }
 
   .line {
@@ -1255,11 +1246,10 @@ nav ul li a:hover {
     background: rgba(15, 15, 15, 0.82);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     z-index: 9999;
   }
-  .btn-secondary {
-    background: var(--primary);
-  }
+
   .bottom-nav a,
   .bottom-nav .search-trigger {
     flex: 1;
@@ -1279,8 +1269,8 @@ nav ul li a:hover {
     padding: 0;
   }
 
-  .bottom-nav a i,
-  .bottom-nav .search-trigger i {
+  .bottom-nav a .icon,
+  .bottom-nav .search-trigger .icon {
     font-size: 20px;
   }
 
@@ -1320,7 +1310,7 @@ nav ul li a:hover {
     border-radius: 18px;
   }
 
-  .cat-card i {
+  .cat-card .icon {
     font-size: 32px;
     margin-bottom: 12px;
   }
@@ -1663,12 +1653,12 @@ nav ul li a:hover {
   box-shadow: 0 15px 30px rgba(91, 140, 255, 0.28);
 }
 
-.modal-cart-btn i {
+.modal-cart-btn .icon {
   font-size: 17px;
   transition: 0.3s ease;
 }
 
-.modal-cart-btn:hover i {
+.modal-cart-btn:hover .icon {
   transform: scale(1.15);
 }
 
@@ -1719,11 +1709,11 @@ nav ul li a:hover {
   background: rgba(91, 140, 255, 0.06);
 }
 
-.modal-product-link i {
+.modal-product-link .icon {
   transition: 0.3s ease;
 }
 
-.modal-product-link:hover i {
+.modal-product-link:hover .icon {
   transform: translateX(-5px);
 }
 
@@ -1821,9 +1811,7 @@ nav ul li a:hover {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .search-overlay.active {

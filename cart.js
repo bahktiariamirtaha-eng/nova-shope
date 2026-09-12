@@ -134,7 +134,7 @@ function renderCart() {
 
       <div class="empty-cart">
 
-        <i class="fa-solid fa-cart-shopping"></i>
+        <svg class="icon"><use href="#icon-cart-shopping"></use></svg>
 
         <h2>
           سبد خرید خالی است
@@ -250,7 +250,7 @@ function renderCart() {
           aria-label="حذف محصول"
         >
 
-          <i class="fa-solid fa-trash"></i>
+          <svg class="icon"><use href="#icon-trash"></use></svg>
 
         </button>
 

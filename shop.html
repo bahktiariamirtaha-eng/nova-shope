@@ -7,13 +7,9 @@
     <title>فروشگاه | Nova Digital</title>
 
     <link rel="stylesheet" href="shop.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
   </head>
   <body>
+    <script src="icons.js"></script>
     <!-- ================= HEADER ================= -->
 
     <header>
@@ -25,7 +21,7 @@
             type="button"
             aria-label="باز کردن منو"
           >
-            <i class="fa-solid fa-ellipsis"></i>
+            <svg class="icon"><use href="#icon-ellipsis"></use></svg>
           </button>
 
           <div class="header-menu-items">
@@ -34,7 +30,7 @@
               class="header-menu-item"
               aria-label="علاقه‌مندی‌ها"
             >
-              <i class="fa-regular fa-heart"></i>
+              <svg class="icon"><use href="#icon-heart-outline"></use></svg>
             </a>
 
             <a
@@ -42,11 +38,11 @@
               class="header-menu-item"
               aria-label="حساب کاربری"
             >
-              <i class="fa-regular fa-user"></i>
+              <svg class="icon"><use href="#icon-user"></use></svg>
             </a>
 
             <a href="cart.html" class="header-menu-item" aria-label="سبد خرید">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <svg class="icon"><use href="#icon-cart-shopping"></use></svg>
             </a>
           </div>
         </div>
@@ -58,7 +54,7 @@
     <section class="breadcrumb">
       <a href="index.html"> خانه </a>
 
-      <i class="fa-solid fa-angle-left"></i>
+      <svg class="icon"><use href="#icon-angle-left"></use></svg>
 
       <span> فروشگاه </span>
     </section>
@@ -68,7 +64,7 @@
     <section class="shop">
       <!-- دکمه‌ی باز کردن فیلتر، فقط تو موبایل دیده می‌شه -->
       <button type="button" id="filterToggleBtn" class="filter-toggle-btn">
-        <i class="fa-solid fa-sliders"></i>
+        <svg class="icon"><use href="#icon-sliders"></use></svg>
         فیلتر محصولات
       </button>
 
@@ -86,7 +82,7 @@
             class="filter-close-btn"
             aria-label="بستن فیلتر"
           >
-            <i class="fa-solid fa-xmark"></i>
+            <svg class="icon"><use href="#icon-xmark"></use></svg>
           </button>
           <button type="button" id="clearFilters" class="clear-filters-btn">
             پاک کردن فیلترها
@@ -202,7 +198,7 @@
             <button type="button" class="load-more-btn" data-category="laptops">
               نمایش بیشتر
 
-              <i class="fa-solid fa-chevron-down"></i>
+              <svg class="icon"><use href="#icon-chevron-down"></use></svg>
             </button>
           </div>
         </section>
@@ -222,7 +218,7 @@
             <button type="button" class="load-more-btn" data-category="mobiles">
               نمایش بیشتر
 
-              <i class="fa-solid fa-chevron-down"></i>
+              <svg class="icon"><use href="#icon-chevron-down"></use></svg>
             </button>
           </div>
         </section>
@@ -246,7 +242,7 @@
             >
               نمایش بیشتر
 
-              <i class="fa-solid fa-chevron-down"></i>
+              <svg class="icon"><use href="#icon-chevron-down"></use></svg>
             </button>
           </div>
         </section>
@@ -270,7 +266,7 @@
             >
               نمایش بیشتر
 
-              <i class="fa-solid fa-chevron-down"></i>
+              <svg class="icon"><use href="#icon-chevron-down"></use></svg>
             </button>
           </div>
         </section>
@@ -294,7 +290,7 @@
             >
               نمایش بیشتر
 
-              <i class="fa-solid fa-chevron-down"></i>
+              <svg class="icon"><use href="#icon-chevron-down"></use></svg>
             </button>
           </div>
         </section>
@@ -318,7 +314,7 @@
           id="modalClose"
           aria-label="بستن"
         >
-          <i class="fa-solid fa-xmark"></i>
+          <svg class="icon"><use href="#icon-xmark"></use></svg>
         </button>
 
         <!-- Product Image -->
@@ -337,7 +333,7 @@
           <div class="modal-actions">
             <!-- Add To Cart -->
             <button type="button" class="modal-cart-btn" id="modalAddToCart">
-              <i class="fa-solid fa-cart-plus"></i>
+              <svg class="icon"><use href="#icon-cart-plus"></use></svg>
               افزودن به سبد خرید
             </button>
 
@@ -349,7 +345,7 @@
               id="modalFavorite"
               aria-label="افزودن به علاقه‌مندی"
             >
-              <i class="fa-regular fa-heart"></i>
+              <svg class="icon"><use href="#icon-heart-outline"></use></svg>
             </button>
           </div>
         </div>

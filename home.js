@@ -121,21 +121,25 @@ const favorites = document.querySelectorAll(".favorite");
 // علاقه‌مندی‌های ذخیره شده
 let savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
+function setHeartIcon(heart, filled) {
+  const use = heart.querySelector("use");
+  if (use) {
+    use.setAttribute("href", filled ? "#icon-heart-solid" : "#icon-heart-outline");
+  }
+}
+
 // بررسی می‌کند قبلاً ذخیره شده یا نه
 favorites.forEach((heart, index) => {
   if (savedFavorites.includes(index)) {
-    heart.classList.remove("fa-regular");
-
-    heart.classList.add("fa-solid");
+    setHeartIcon(heart, true);
   }
 
   // کلیک روی قلب
   heart.addEventListener("click", () => {
-    heart.classList.toggle("fa-solid");
+    const isFilled = heart.querySelector("use")?.getAttribute("href") === "#icon-heart-solid";
+    setHeartIcon(heart, !isFilled);
 
-    heart.classList.toggle("fa-regular");
-
-    if (heart.classList.contains("fa-solid")) {
+    if (!isFilled) {
       savedFavorites.push(index);
     } else {
       savedFavorites = savedFavorites.filter((item) => item !== index);
@@ -328,8 +332,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     modalFavoriteBtn.innerHTML = liked
-      ? '<i class="fa-solid fa-heart"></i>'
-      : '<i class="fa-regular fa-heart"></i>';
+      ? '<svg class="icon"><use href="#icon-heart-solid"></use></svg>'
+      : '<svg class="icon"><use href="#icon-heart-outline"></use></svg>';
 
     modalFavoriteBtn.classList.toggle("liked", liked);
   }

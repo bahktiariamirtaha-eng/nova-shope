@@ -484,11 +484,11 @@ function updateModalFavorite(button) {
   const liked = favorites.some((item) => item.name === selectedProduct.name);
 
   if (liked) {
-    button.innerHTML = '<i class="fa-solid fa-heart"></i>';
+    button.innerHTML = '<svg class="icon"><use href="#icon-heart-solid"></use></svg>';
 
     button.classList.add("liked");
   } else {
-    button.innerHTML = '<i class="fa-regular fa-heart"></i>';
+    button.innerHTML = '<svg class="icon"><use href="#icon-heart-outline"></use></svg>';
 
     button.classList.remove("liked");
   }
@@ -508,10 +508,10 @@ function createProductCard(product) {
       </div>
 
 
-      <i
-        class="fa-regular fa-heart favorite"
+      <svg
+        class="icon favorite"
         data-product="${product.name}"
-      ></i>
+      ><use href="#icon-heart-outline"></use></svg>
 
 
       <div class="product-image">
@@ -549,7 +549,7 @@ function createProductCard(product) {
         >
           مشاهده محصول
 
-          <i class="fa-solid fa-arrow-left"></i>
+          <svg class="icon"><use href="#icon-arrow-left"></use></svg>
         </a>
 
       </div>
@@ -663,7 +663,7 @@ function updateLoadMoreButton(category, filters) {
 
     button.innerHTML = `
       همه محصولات نمایش داده شد
-      <i class="fa-solid fa-check"></i>
+      <svg class="icon"><use href="#icon-check"></use></svg>
     `;
   } else {
     button.disabled = false;
@@ -672,7 +672,7 @@ function updateLoadMoreButton(category, filters) {
 
     button.innerHTML = `
       نمایش بیشتر
-      <i class="fa-solid fa-chevron-down"></i>
+      <svg class="icon"><use href="#icon-chevron-down"></use></svg>
     `;
   }
 }

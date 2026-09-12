@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +19,7 @@
   </head>
 
   <body>
+    <script src="icons.js"></script>
     <!-- start header -->
     <!-- بنر بالای صفحه -->
     <div class="top-banner" id="topBanner">
@@ -30,7 +27,7 @@
         🎉 جشنواره تخفیف نوا دیجیتال شروع شد — تا ۲۰٪ تخفیف روی محصولات منتخب
       </p>
       <button type="button" id="closeBanner" aria-label="بستن">
-        <i class="fa-solid fa-xmark"></i>
+        <svg class="icon"><use href="#icon-xmark"></use></svg>
       </button>
     </div>
 
@@ -49,7 +46,7 @@
             <li class="dropdown">
               <a href="shop.html">
                 فروشگاه
-                <i class="fa fa-angle-down"></i>
+                <svg class="icon"><use href="#icon-angle-down"></use></svg>
               </a>
 
               <ul class="dropdown-menu">
@@ -68,17 +65,21 @@
         <!-- دسکتاپ -->
         <div class="header-icons">
           <button type="button" class="search-trigger" aria-label="جستجو">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <svg class="icon"><use href="#icon-magnifying-glass"></use></svg>
           </button>
-          <i class="fa-regular fa-user"></i>
-          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <svg class="icon"><use href="#icon-user"></use></svg>
+          <a href="cart.html"
+            ><svg class="icon"><use href="#icon-cart-shopping"></use></svg
+          ></a>
         </div>
 
         <!-- موبایل -->
         <div class="mobile-icons">
-          <a href="#"> <i class="fa-regular fa-heart"></i></a>
+          <a href="#">
+            <svg class="icon"><use href="#icon-heart-outline"></use></svg
+          ></a>
           <button type="button" class="search-trigger" aria-label="جستجو">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <svg class="icon"><use href="#icon-magnifying-glass"></use></svg>
           </button>
         </div>
       </div>
@@ -113,7 +114,7 @@
     <!-- start two hero -->
     <section class="features">
       <div class="feature">
-        <i class="fa-solid fa-truck-fast"></i>
+        <svg class="icon"><use href="#icon-truck-fast"></use></svg>
         <div>
           <h4>ارسال سریع</h4>
           <span>ارسال به سراسر کشور</span>
@@ -123,7 +124,7 @@
       <div class="line"></div>
 
       <div class="feature">
-        <i class="fa-solid fa-shield-halved"></i>
+        <svg class="icon"><use href="#icon-shield-halved"></use></svg>
         <div>
           <h4>ضمانت اصالت</h4>
           <span>کالاهای اورجینال</span>
@@ -133,7 +134,7 @@
       <div class="line"></div>
 
       <div class="feature">
-        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <svg class="icon"><use href="#icon-screwdriver-wrench"></use></svg>
         <div>
           <h4>گارانتی تعمیر</h4>
           <span>۶ ماه ضمانت خدمات</span>
@@ -147,22 +148,22 @@
     <!-- start  categories-->
     <section class="categories">
       <a href="shop.html#laptops" class="cat-card">
-        <i class="fa-solid fa-laptop"></i>
+        <svg class="icon"><use href="#icon-laptop"></use></svg>
         <h3>لپ تاپ</h3>
       </a>
 
       <a href="shop.html#mobiles" class="cat-card">
-        <i class="fa-solid fa-mobile-screen"></i>
+        <svg class="icon"><use href="#icon-mobile-screen"></use></svg>
         <h3>موبایل</h3>
       </a>
 
       <a href="shop.html#monitors" class="cat-card">
-        <i class="fa-solid fa-tablet-screen-button"></i>
+        <svg class="icon"><use href="#icon-tablet"></use></svg>
         <h3>مانیتور</h3>
       </a>
 
       <a href="shop.html#accessories" class="cat-card">
-        <i class="fa-solid fa-headphones"></i>
+        <svg class="icon"><use href="#icon-headphones"></use></svg>
         <h3>لوازم جانبی</h3>
       </a>
     </section>
@@ -179,7 +180,9 @@
           <div class="swiper-slide">
             <div class="product-card">
               <span class="badge">15%</span>
-              <i class="fa-regular fa-heart favorite"></i>
+              <svg class="icon favorite">
+                <use href="#icon-heart-outline"></use>
+              </svg>
               <div class="product-image">
                 <img src="image/image-1-laptop.png" />
               </div>
@@ -192,7 +195,7 @@
                 </div>
                 <a href="#">
                   مشاهده محصول
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <svg class="icon"><use href="#icon-arrow-left"></use></svg>
                 </a>
               </div>
             </div>
@@ -202,7 +205,9 @@
             <div class="product-card">
               <span class="badge">15%</span>
 
-              <i class="fa-regular fa-heart favorite"></i>
+              <svg class="icon favorite">
+                <use href="#icon-heart-outline"></use>
+              </svg>
 
               <div class="product-image">
                 <img src="image/image-phone2.png" />
@@ -220,7 +225,7 @@
 
                 <a href="#">
                   مشاهده محصول
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <svg class="icon"><use href="#icon-arrow-left"></use></svg>
                 </a>
               </div>
             </div>
@@ -229,7 +234,9 @@
           <div class="swiper-slide">
             <div class="product-card">
               <span class="badge">15%</span>
-              <i class="fa-regular fa-heart favorite"></i>
+              <svg class="icon favorite">
+                <use href="#icon-heart-outline"></use>
+              </svg>
               <div class="product-image">
                 <img src="image/image-phone1.png" />
               </div>
@@ -245,7 +252,7 @@
 
                 <a href="#">
                   مشاهده محصول
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <svg class="icon"><use href="#icon-arrow-left"></use></svg>
                 </a>
               </div>
             </div>
@@ -255,7 +262,9 @@
             <div class="product-card">
               <span class="badge">15%</span>
 
-              <i class="fa-regular fa-heart favorite"></i>
+              <svg class="icon favorite">
+                <use href="#icon-heart-outline"></use>
+              </svg>
 
               <div class="product-image">
                 <img src="image/image-2-laptop.png" />
@@ -273,7 +282,7 @@
 
                 <a href="#">
                   مشاهده محصول
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <svg class="icon"><use href="#icon-arrow-left"></use></svg>
                 </a>
               </div>
             </div>
@@ -282,7 +291,9 @@
           <div class="swiper-slide">
             <div class="product-card">
               <span class="badge">15%</span>
-              <i class="fa-regular fa-heart favorite"></i>
+              <svg class="icon favorite">
+                <use href="#icon-heart-outline"></use>
+              </svg>
               <div class="product-image">
                 <img src="image/image-hea1.png" />
               </div>
@@ -295,7 +306,7 @@
                 </div>
                 <a href="#">
                   مشاهده محصول
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <svg class="icon"><use href="#icon-arrow-left"></use></svg>
                 </a>
               </div>
             </div>
@@ -305,7 +316,9 @@
             <div class="product-card">
               <span class="badge">15%</span>
 
-              <i class="fa-regular fa-heart favorite"></i>
+              <svg class="icon favorite">
+                <use href="#icon-heart-outline"></use>
+              </svg>
 
               <div class="product-image">
                 <img src="image/image-1-mani.png" />
@@ -323,7 +336,7 @@
 
                 <a href="#">
                   مشاهده محصول
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <svg class="icon"><use href="#icon-arrow-left"></use></svg>
                 </a>
               </div>
             </div>
@@ -346,9 +359,9 @@
 
           <p>بهترین برندهای دنیا با ضمانت اصالت و ارسال سریع</p>
 
-          <a href="shop.html">
+          <a href="#">
             خرید محصولات
-            <i class="fa-solid fa-arrow-left"></i>
+            <svg class="icon"><use href="#icon-arrow-left"></use></svg>
           </a>
         </div>
 
@@ -366,7 +379,7 @@
 
         <a href="#">
           مشاهده همه
-          <i class="fa-solid fa-arrow-left"></i>
+          <svg class="icon"><use href="#icon-arrow-left"></use></svg>
         </a>
       </div>
       <div class="videos-grid">
@@ -377,7 +390,7 @@
           </video>
           <div class="video-overlay">
             <div class="play-btn">
-              <i class="fa-solid fa-play"></i>
+              <svg class="icon"><use href="#icon-play"></use></svg>
             </div>
 
             <h3>بررسی لپ تاپ ASUS TUF</h3>
@@ -392,7 +405,7 @@
 
           <div class="video-overlay">
             <div class="play-btn">
-              <i class="fa-solid fa-play"></i>
+              <svg class="icon"><use href="#icon-play"></use></svg>
             </div>
 
             <h3>بررسی Galaxy S25 Ultra</h3>
@@ -407,7 +420,7 @@
 
           <div class="video-overlay">
             <div class="play-btn">
-              <i class="fa-solid fa-play"></i>
+              <svg class="icon"><use href="#icon-play"></use></svg>
             </div>
 
             <h3>بررسی Sony WH-1000XM5</h3>
@@ -417,14 +430,14 @@
         <!-- More -->
         <div class="video-more">
           <div class="play-circle">
-            <i class="fa-solid fa-play"></i>
+            <svg class="icon"><use href="#icon-play"></use></svg>
           </div>
 
           <h3>مشاهده همه</h3>
 
           <p>ویدیوهای بررسی تخصصی</p>
 
-          <i class="fa-solid fa-arrow-left arrow"></i>
+          <svg class="icon arrow"><use href="#icon-arrow-left"></use></svg>
         </div>
       </div>
     </section>
@@ -433,7 +446,7 @@
     <div class="video-modal">
       <div class="modal-content">
         <button class="close-modal">
-          <i class="fa-solid fa-xmark"></i>
+          <svg class="icon"><use href="#icon-xmark"></use></svg>
         </button>
 
         <video class="modal-video" controls>
@@ -450,7 +463,7 @@
         <h2>نظرات مشتریان</h2>
         <a href="#">
           مشاهده همه
-          <i class="fa-solid fa-arrow-left"></i>
+          <svg class="icon"><use href="#icon-arrow-left"></use></svg>
         </a>
       </div>
       <div class="swiper reviewSwiper">
@@ -544,13 +557,21 @@
           <p>فروشگاه تخصصی لپ تاپ، موبایل، مانیتور و تجهیزات دیجیتال</p>
 
           <div class="footer-social">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              ><svg class="icon"><use href="#icon-instagram"></use></svg
+            ></a>
 
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"
+              ><svg class="icon"><use href="#icon-telegram"></use></svg
+            ></a>
 
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"
+              ><svg class="icon"><use href="#icon-whatsapp"></use></svg
+            ></a>
 
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"
+              ><svg class="icon"><use href="#icon-youtube"></use></svg
+            ></a>
           </div>
         </div>
 
@@ -626,7 +647,7 @@
           id="modalClose"
           aria-label="بستن"
         >
-          <i class="fa-solid fa-xmark"></i>
+          <svg class="icon"><use href="#icon-xmark"></use></svg>
         </button>
 
         <!-- Product Image -->
@@ -652,7 +673,7 @@
           <div class="modal-actions">
             <!-- Add To Cart -->
             <button type="button" class="modal-cart-btn" id="modalAddToCart">
-              <i class="fa-solid fa-cart-plus"></i>
+              <svg class="icon"><use href="#icon-cart-plus"></use></svg>
 
               افزودن به سبد خرید
             </button>
@@ -664,7 +685,7 @@
               id="modalFavorite"
               aria-label="افزودن به علاقه‌مندی"
             >
-              <i class="fa-regular fa-heart"></i>
+              <svg class="icon"><use href="#icon-heart-outline"></use></svg>
             </button>
           </div>
 
@@ -676,7 +697,7 @@
           >
             مشاهده اطلاعات کامل محصول
 
-            <i class="fa-solid fa-arrow-left"></i>
+            <svg class="icon"><use href="#icon-arrow-left"></use></svg>
           </a>
         </div>
       </div>
@@ -689,7 +710,7 @@
     <div class="search-overlay" id="searchOverlay">
       <div class="search-box">
         <div class="search-input-row">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <svg class="icon"><use href="#icon-magnifying-glass"></use></svg>
           <input
             type="text"
             id="searchInput"
@@ -697,7 +718,7 @@
             autocomplete="off"
           />
           <button type="button" id="closeSearch" aria-label="بستن جستجو">
-            <i class="fa-solid fa-xmark"></i>
+            <svg class="icon"><use href="#icon-xmark"></use></svg>
           </button>
         </div>
 
@@ -710,27 +731,27 @@
     <!-- start responsiv -->
     <nav class="bottom-nav">
       <a href="#" class="active">
-        <i class="fa-solid fa-house"></i>
+        <svg class="icon"><use href="#icon-house"></use></svg>
         <span>خانه</span>
       </a>
 
       <a href="shop.html">
-        <i class="fa-solid fa-layer-group"></i>
+        <svg class="icon"><use href="#icon-layer-group"></use></svg>
         <span>دسته‌ها</span>
       </a>
 
       <button type="button" class="search-trigger">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <svg class="icon"><use href="#icon-magnifying-glass"></use></svg>
         <span>جستجو</span>
       </button>
 
       <a href="cart.html">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <svg class="icon"><use href="#icon-cart-shopping"></use></svg>
         <span>سبد</span>
       </a>
 
       <a href="#">
-        <i class="fa-regular fa-user"></i>
+        <svg class="icon"><use href="#icon-user"></use></svg>
         <span>حساب</span>
       </a>
     </nav>

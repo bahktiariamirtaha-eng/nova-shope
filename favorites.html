@@ -7,14 +7,10 @@
     <title>علاقه‌مندی‌ها | Nova Digital</title>
 
     <link rel="stylesheet" href="favorites.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
   </head>
 
   <body>
+    <script src="icons.js"></script>
     <header>
       <div class="header-container">
         <div class="header-actions">
@@ -23,7 +19,7 @@
             type="button"
             aria-label="باز کردن منو"
           >
-            <i class="fa-solid fa-ellipsis"></i>
+            <svg class="icon"><use href="#icon-ellipsis"></use></svg>
           </button>
 
           <div class="header-menu-items">
@@ -32,15 +28,15 @@
               class="header-menu-item"
               aria-label="حساب کاربری"
             >
-              <i class="fa-regular fa-user"></i>
+              <svg class="icon"><use href="#icon-user"></use></svg>
             </a>
 
             <a href="index.html" class="header-menu-item" aria-label="خانه">
-              <i class="fa-solid fa-house"></i>
+              <svg class="icon"><use href="#icon-house"></use></svg>
             </a>
 
             <a href="cart.html" class="header-menu-item" aria-label="سبد خرید">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <svg class="icon"><use href="#icon-cart-shopping"></use></svg>
               <span class="cart-count">0</span>
             </a>
           </div>
@@ -53,7 +49,7 @@
     <section class="breadcrumb">
       <a href="index.html"> خانه </a>
 
-      <i class="fa-solid fa-angle-left"></i>
+      <svg class="icon"><use href="#icon-angle-left"></use></svg>
 
       <span> علاقه‌مندی‌ها </span>
     </section>
